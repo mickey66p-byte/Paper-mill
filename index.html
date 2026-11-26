@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soham Papers | Engineered Paperboard</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23090d0c'/%3E%3Ctext x='16' y='22' font-size='15' font-family='Arial' font-weight='700' fill='%23c6e36a' text-anchor='middle'%3ESP%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Soham Papers Pvt Ltd — coated and uncoated duplex board manufacturer in Morbi, Gujarat, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090d0c;--panel:#111816;--cream:#e9e4d8;--muted:#a7b0a9;--lime:#c6e36a;--line:#29332e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{overflow-x:clip;margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.07;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;border-bottom:1px solid #ffffff12;position:sticky;top:0;background:#090d0ce8;backdrop-filter:blur(18px);z-index:20}
+.brand{display:flex;align-items:center;gap:12px;font:800 15px 'Manrope',sans-serif;letter-spacing:2px}
+.mark{width:35px;height:35px;border:1px solid var(--lime);display:grid;place-items:center;color:var(--lime);transform:rotate(45deg)}
+.mark span{transform:rotate(-45deg)}
+nav{display:flex;gap:27px;align-items:center}
+nav a{font-size:12px;color:#b9c0b8;letter-spacing:1px;text-transform:uppercase;transition:color .2s}
+nav a:hover,nav a.active{color:var(--lime)}
+.navcta,.cta{border:1px solid var(--lime);color:var(--lime);padding:13px 19px;border-radius:2px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;background:transparent;cursor:pointer;transition:.3s;white-space:nowrap}
+.navcta:hover,.cta:hover{background:var(--lime);color:#111}
+.ghost{border:1px solid #58645d;color:var(--cream);background:transparent;padding:13px 19px;border-radius:2px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.3s;white-space:nowrap}
+.ghost:hover{border-color:var(--lime);color:var(--lime)}
+.page{display:none;min-height:75vh}
+.page.active{display:block;animation:enter .6s ease both}
+@keyframes enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.hero{min-height:690px;padding:95px 8vw 70px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;overflow:hidden;position:relative}
+.eyebrow{color:var(--lime);font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font:600 clamp(48px,7vw,92px)/.99 'Manrope',sans-serif;letter-spacing:-0.04em;margin:24px 0}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{max-width:510px;color:var(--muted);font-size:16px;line-height:1.8}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.visual{height:500px;position:relative;perspective:1000px;display:grid;place-items:center}
+.orb{position:absolute;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#536c46,#1c2c23 48%,#0a100d 72%);filter:blur(1px);box-shadow:0 0 110px #9bc65b22}
+.roll{width:310px;height:370px;position:relative;transform-style:preserve-3d;--s:1;transform:rotateY(-24deg) rotateX(8deg) scale(var(--s));transition:transform .15s ease-out;z-index:2}
+.roll .body{position:absolute;inset:0;border-radius:12px;background:repeating-linear-gradient(90deg,#d8d3c4 0 4px,#f4f0e4 5px 9px,#c8c2b2 10px 12px);transform:translateZ(35px);box-shadow:inset -30px 0 45px #6d6a5e55,inset 20px 0 30px #fff9,25px 28px 35px #0009}
+.roll:before{content:"";position:absolute;left:-35px;top:0;width:70px;height:100%;border-radius:50%;background:repeating-radial-gradient(ellipse,#d9d4c7 0 3px,#aaa596 4px 5px);transform:rotateY(90deg)}
+.roll:after{content:"";position:absolute;right:-35px;top:0;width:70px;height:100%;border-radius:50%;background:repeating-radial-gradient(ellipse,#d9d4c7 0 3px,#aaa596 4px 5px);transform:rotateY(90deg)}
+.rolllabel{position:absolute;z-index:3;top:43%;left:8%;width:84%;text-align:center;color:#1c241c;border-top:1px solid #59634f;border-bottom:1px solid #59634f;padding:12px 0;font:800 13px 'Manrope',sans-serif;letter-spacing:3px;transform:translateZ(39px)}
+.floatnote{position:absolute;right:0;bottom:45px;border:1px solid #ffffff2b;background:#111b16c9;padding:17px 20px;backdrop-filter:blur(12px);font-size:11px;letter-spacing:1px;z-index:4}
+.floatnote b{display:block;color:var(--lime);font:700 22px 'Manrope',sans-serif;margin-bottom:4px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 8vw;gap:20px}
+.stat strong{display:block;font:700 29px 'Manrope',sans-serif;color:var(--lime)}
+.stat span{font-size:10px;letter-spacing:1.4px;color:var(--muted);text-transform:uppercase}
+.section{padding:95px 8vw}
+.sectionhead{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:42px}
+.section h2{font:600 clamp(34px,5vw,58px)/1.05 'Manrope',sans-serif;letter-spacing:-0.03em;margin:13px 0}
+.sectionhead p{max-width:410px;color:var(--muted);line-height:1.7;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{background:var(--panel);border:1px solid var(--line);padding:28px;min-height:240px;transition:.35s;transform-style:preserve-3d}
+.card:hover{border-color:#9ab65b;transform:perspective(800px) translateY(-7px) rotateX(2deg)}
+.card .num{color:var(--lime);font-size:11px;letter-spacing:2px}
+.card h3{font:600 22px 'Manrope',sans-serif;margin:40px 0 12px}
+.card p{color:var(--muted);font-size:13px;line-height:1.75}
+.productvisual{height:155px;margin:-28px -28px 24px;overflow:hidden;background:linear-gradient(135deg,#25332a,#101713);display:grid;place-items:center}
+.sheet{width:125px;height:90px;background:linear-gradient(140deg,#fffdf0,#b7b7a6);box-shadow:15px 12px 0 #b4b09e,30px 24px 0 #76796b;transform:rotate(-12deg);transition:.4s}
+.card:hover .sheet{transform:rotate(5deg) scale(1.08)}
+.blue{background:linear-gradient(135deg,#162e4b,#101713)}
+.blue .sheet{background:linear-gradient(140deg,#6c91b6,#183b66)}
+.dark{background:linear-gradient(135deg,#32332f,#101713)}
+.dark .sheet{background:linear-gradient(140deg,#77796f,#33372f)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.featureimage{min-height:420px;background:linear-gradient(145deg,#293c31,#0d1410);border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center;perspective:900px}
+.stack{width:62%;height:200px;position:relative;transform:rotateX(48deg) rotateZ(-22deg);transform-style:preserve-3d}
+.stack i{position:absolute;inset:0;background:linear-gradient(120deg,#f4f0df,#b9b5a5);border:1px solid #8d8c7e;box-shadow:0 18px 28px #0008;transform:translateZ(var(--z,0px))}
+.stack i:nth-child(1){--z:24px;z-index:4}
+.stack i:nth-child(2){--z:8px;z-index:3}
+.stack i:nth-child(3){--z:-8px;z-index:2}
+.stack i:nth-child(4){--z:-24px;z-index:1}
+.featurecopy p{color:var(--muted);line-height:1.85;font-size:14px}
+.ticks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:28px}
+.ticks span{font-size:12px;color:#d4d9d0}
+.ticks span:before{content:'↗';color:var(--lime);margin-right:9px}
+.band{padding:70px 8vw;background:var(--lime);color:#111b14;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.band h2{font:700 clamp(30px,4vw,48px) 'Manrope',sans-serif;margin:0}
+.band .cta{border-color:#172119;color:#172119}
+.band .cta:hover{background:#172119;color:#d7ef8c}
+.pagehero{padding:85px 8vw 55px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0%,#283b2d 0,transparent 45%)}
+.pagehero h1{font:600 clamp(42px,6vw,72px) 'Manrope',sans-serif;letter-spacing:-0.04em;margin:15px 0}
+.pagehero p{color:var(--muted);max-width:650px;line-height:1.8}
+.specgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.spec{padding:23px;border:1px solid var(--line);background:#101713}
+.spec small{color:var(--lime);letter-spacing:1.5px;text-transform:uppercase}
+.spec h3{font:600 19px 'Manrope',sans-serif;margin:12px 0}
+.spec p{color:var(--muted);font-size:13px;line-height:1.7}
+.tablewrap{overflow-x:auto;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;min-width:550px}
+td,th{text-align:left;padding:17px;border-bottom:1px solid var(--line);font-size:13px}
+th{color:var(--lime);font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
+td{color:#cbd1c9}
+tr:last-child td{border:0}
+.companygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.company{border:1px solid var(--line);padding:19px;background:#101713;min-height:155px}
+.company b{font:600 15px 'Manrope',sans-serif}
+.company small{display:block;color:var(--lime);margin:8px 0;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.company p{color:var(--muted);font-size:12px;line-height:1.6}
+.faq{max-width:850px}
+.faq details{border-bottom:1px solid var(--line);padding:21px 0}
+.faq summary{cursor:pointer;list-style:none;font:600 16px 'Manrope',sans-serif}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';float:right;color:var(--lime);font-size:22px}
+.faq details[open] summary:after{content:'−'}
+.faq details p{color:var(--muted);font-size:13px;line-height:1.8;max-width:760px}
+.ask{display:flex;gap:9px;margin-top:28px}
+.ask input{flex:1;min-width:0;background:#111816;border:1px solid var(--line);padding:15px;color:white}
+.ask input:focus{outline:none;border-color:var(--lime)}
+.answer{color:var(--lime);line-height:1.7;font-size:13px;margin-top:15px}
+.contactbox{padding:30px;border:1px solid var(--line);background:var(--panel)}
+.contactbox h3{font:600 22px 'Manrope',sans-serif}
+.contactbox p{color:var(--muted);line-height:1.8;font-size:13px}
+.contactbox a{color:var(--lime);text-decoration:underline}
+.hours{width:100%;border-collapse:collapse;min-width:0;margin-top:6px}
+.hours td{padding:7px 0;border:0;font-size:12px;color:#cbd1c9}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--lime)}
+.quickbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.quickbar a,.quickbar button{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.quickbar .solid{background:var(--lime);color:#111b14;font-weight:700}
+.quickbar .solid:hover{background:#d6ef84;color:#111b14}
+.statusdot{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:6px 11px;border:1px solid var(--line);border-radius:99px;background:#0d1412}
+.statusdot:before{content:"";width:8px;height:8px;border-radius:50%;background:#6b7d72}
+.statusdot.open{color:var(--lime);border-color:#4f6b3a}
+.statusdot.open:before{background:var(--lime);box-shadow:0 0 10px var(--lime)}
+.statusdot.closed{color:#e8a27a;border-color:#6b4a38}
+.statusdot.closed:before{background:#e8a27a}
+.contactgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contactgrid3 .contactbox{display:flex;flex-direction:column;gap:12px}
+.contactgrid3 .contactbox h3{margin:6px 0 2px}
+.crow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 13px;border:1px solid var(--line);border-radius:6px;background:#0c1210;font-size:13px}
+.crow span{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.crow a{color:var(--cream);text-decoration:none;font-weight:600}
+.crow a:hover{color:var(--lime)}
+.mini{background:#151f1c;border:1px solid var(--line);color:var(--lime);border-radius:4px;padding:6px 10px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;flex-shrink:0;transition:.2s}
+.mini:hover{background:var(--lime);color:#111b14}
+.linklist{display:grid;gap:8px}
+.linklist a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:#0c1210;color:var(--cream);text-decoration:none;font-size:13px;transition:.2s}
+.linklist a:hover{border-color:var(--lime);color:var(--lime)}
+.linklist small{color:var(--muted);font-size:11px}
+.enq{margin-top:22px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:28px}
+.enqgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:18px}
+.enqfields{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.enqfields .full{grid-column:1/-1}
+.enq label{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.enq input,.enq select,.enq textarea{width:100%;background:#090d0c;border:1px solid var(--line);border-radius:4px;padding:10px;color:var(--cream);font-size:13px}
+.enq input:focus,.enq select:focus,.enq textarea:focus{outline:none;border-color:var(--lime)}
+.enq textarea{min-height:78px;resize:vertical}
+.enqprev textarea{min-height:250px;font-size:12px;line-height:1.6}
+.enqbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.enqbtns .span2{grid-column:1/-1}
+.enqbtns a,.enqbtns button{text-decoration:none;display:inline-flex;justify-content:center;align-items:center}
+.enqbtns .solid{background:var(--lime);color:#111b14;font-weight:700}
+.enqbtns .solid:hover{background:#d6ef84;color:#111b14}
+.mapwrap{margin-top:22px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel)}
+.mapbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+.mapbar a{color:var(--lime);text-decoration:underline;margin-left:14px}
+.map{width:100%;height:340px;border:0;display:block;filter:grayscale(1) invert(.9) contrast(.8)}
+.toast2{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--lime);color:#111b14;padding:11px 18px;border-radius:6px;font-size:12px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:60}
+.toast2.show{opacity:1;transform:translate(-50%,0)}
+footer{border-top:1px solid var(--line);padding:30px 8vw;display:flex;justify-content:space-between;gap:20px;color:#818d84;font-size:11px;letter-spacing:1px}
+.footlinks{display:flex;gap:20px}
+@media(max-width:850px){
+  header{padding:0 5vw}
+  nav{gap:12px}
+  nav a{font-size:10px}
+  .navcta{display:none}
+  .hero{min-height:auto;grid-template-columns:1fr;padding:70px 7vw 25px}
+  .visual{height:380px}
+  .roll{--s:.8}
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .cards,.companygrid{grid-template-columns:1fr 1fr}
+  .split,.contactgrid3,.enqgrid{grid-template-columns:1fr}
+  .section{padding:70px 7vw}
+}
+@media(max-width:540px){
+  header{height:auto;min-height:70px;align-items:flex-start;padding:16px 5vw;flex-direction:column;gap:13px}
+  nav{width:100%;overflow-x:auto;padding-bottom:5px;gap:18px}
+  nav a{white-space:nowrap}
+  .visual{height:330px}
+  .orb{width:280px;height:280px}
+  .roll{--s:.65}
+  .floatnote{right:0;bottom:10px}
+  .cards,.companygrid,.specgrid,.enqfields,.enqbtns,.ticks{grid-template-columns:1fr}
+  .sectionhead{display:block}
+  .band{align-items:flex-start;flex-direction:column}
+  footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header>
+  <a class="brand" href="#home" onclick="showPage('home');return false"><span class="mark"><span>SP</span></span> SOHAM PAPERS</a>
+  <nav>
+    <a href="#home" data-page="home" class="active" onclick="showPage('home');return false">Home</a>
+    <a href="#company" data-page="company" onclick="showPage('company');return false">Company</a>
+    <a href="#products" data-page="products" onclick="showPage('products');return false">Products</a>
+    <a href="#trade" data-page="trade" onclick="showPage('trade');return false">Trade &amp; Terms</a>
+    <a href="#network" data-page="network" onclick="showPage('network');return false">Industry Network</a>
+    <a href="#contact" data-page="contact" onclick="showPage('contact');return false">Contact</a>
+  </nav>
+  <button type="button" class="navcta" onclick="showPage('contact')">Enquire ↗</button>
+</header>
+
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Paperboard manufacturing · Morbi, India</div>
+      <h1>Material for<br><em>what’s next.</em></h1>
+      <p>Coated and uncoated duplex board papers engineered for packaging applications. Explore the Soham Papers product range, trade information and company profile.</p>
+      <div class="hero-actions">
+        <button type="button" class="cta" onclick="showPage('products')">Explore products ↗</button>
+        <button type="button" class="ghost" onclick="showPage('company')">Discover Soham</button>
+      </div>
+    </div>
+    <div class="visual" id="visual">
+      <div class="orb"></div>
+      <div class="roll" id="roll">
+        <div class="body"></div>
+        <div class="rolllabel">SOHAM<br>PAPERS</div>
+      </div>
+      <div class="floatnote"><b>180–450 GSM</b>Duplex board range</div>
+    </div>
+  </div>
+  <div class="strip">
+    <div class="stat"><strong>2010</strong><span>Founded in · PaperIndex profile</span></div>
+    <div class="stat"><strong>180–450</strong><span>GSM product range</span></div>
+    <div class="stat"><strong>50%</strong><span>Export percentage · listed profile</span></div>
+    <div class="stat"><strong>15 days</strong><span>Average export lead time</span></div>
+  </div>
+  <div class="section">
+    <div class="sectionhead">
+      <div><div class="eyebrow">What we make</div><h2>Board built for<br>real-world packaging.</h2></div>
+      <p>Different finishes and board types for packaging converters and industrial applications. Product details below are transcribed from the supplied PaperIndex profile.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="productvisual"><div class="sheet"></div></div><div class="num">01 / COATED</div><h3>LWC &amp; HWC Duplex</h3><p>Light-weight and high-weight coated duplex board, with smooth, bright or ultra-smooth glossy surface options.</p></article>
+      <article class="card"><div class="productvisual blue"><div class="sheet"></div></div><div class="num">02 / COATED</div><h3>Deluxe Blue</h3><p>Blue-colour coated duplex paper with a listed 12 GSM coating for colour effect.</p></article>
+      <article class="card"><div class="productvisual dark"><div class="sheet"></div></div><div class="num">03 / UNCOATED</div><h3>Ordinary Duplex</h3><p>Uncoated / ordinary duplex board papers for packaging and related applications.</p></article>
+    </div>
+  </div>
+  <div class="band">
+    <h2>Looking for the right board<br>for your next packaging run?</h2>
+    <button type="button" class="cta" onclick="showPage('contact')">Connect with Soham ↗</button>
+  </div>
+</section>
+
+<section id="company" class="page">
+  <div class="pagehero">
+    <div class="eyebrow">01 / Company profile</div>
+    <h1>Built around board.<br><em style="color:var(--lime)">Focused on quality.</em></h1>
+    <p>Soham Papers Pvt Ltd is described on its PaperIndex profile as a duplex board manufacturer based in Gujarat, India, and a manufacturer and exporter.</p>
+  </div>
+  <div class="section split">
+    <div class="featureimage"><div class="stack"><i></i><i></i><i></i><i></i></div></div>
+    <div class="featurecopy">
+      <div class="eyebrow">Company overview</div>
+      <h2>Quality at a<br>reasonable cost.</h2>
+      <p>The company profile states that Soham Papers manufactures different types of coated and uncoated duplex board papers in different GSM, from 180 to 450. Products are supplied in reel form and are used for making corrugated boxes, liners, textile tubes and duplex cartons, with packaging identified as the main consumption area.</p>
+      <p>The stated USP is customer satisfaction and good quality at reasonable cost.</p>
+      <div class="ticks"><span>Manufacturer &amp; exporter</span><span>Private limited company</span><span>Coated board range</span><span>Uncoated board range</span></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="eyebrow">Company facts</div>
+    <h2>At a glance</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Field</th><th>Listed information</th></tr></thead>
+        <tbody>
+          <tr><td>Company name</td><td>Soham Papers Pvt Ltd</td></tr>
+          <tr><td>Founded in</td><td>2010 (PaperIndex profile)</td></tr>
+          <tr><td>Incorporated</td><td>29 July 2009 (company registration record)</td></tr>
+          <tr><td>CIN</td><td>U21000GJ2009PTC057665 · ROC Ahmedabad · Status: Active</td></tr>
+          <tr><td>Registered office</td><td>S. No. 237/1-2-3, Navagam Road, Lilapar, Morbi, Gujarat 363641</td></tr>
+          <tr><td>Company type</td><td>Private Limited</td></tr>
+          <tr><td>Business type</td><td>Manufacturer, Exporter</td></tr>
+          <tr><td>Primary focus</td><td>Coated and uncoated duplex board / paper</td></tr>
+          <tr><td>Product format</td><td>Reels</td></tr>
+          <tr><td>Languages spoken</td><td>English</td></tr>
+          <tr><td>Annual sales</td><td>Confidential (PaperIndex)</td></tr>
+          <tr><td>Marketing contact</td><td>Jill Bhalodiya · Marketing Person</td></tr>
+          <tr><td>PaperIndex member since</td><td>December 2018</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:11px;line-height:1.7">Note: PaperIndex lists the profile founding year as 2010. The company registration record shows incorporation on 29 July 2009. These are different data fields from different sources, so both are shown rather than reconciled.</p>
+  </div>
+</section>
+
+<section id="products" class="page">
+  <div class="pagehero">
+    <div class="eyebrow">02 / Product portfolio</div>
+    <h1>Surface. Substance.<br><em style="color:var(--lime)">Performance.</em></h1>
+    <p>Duplex board products listed by Soham Papers, including coated and uncoated grades, with a stated range of 180–450 GSM.</p>
+  </div>
+  <div class="section">
+    <div class="specgrid">
+      <div class="spec"><small>Coated · LWC</small><h3>Light Weight Coated Duplex</h3><p>Listed coating: 12 GSM. Designed for a smooth and bright surface.</p></div>
+      <div class="spec"><small>Coated · HWC</small><h3>High Weight Coated Duplex</h3><p>Listed coating: 24 GSM. Described as having an ultra-smooth and glossy surface.</p></div>
+      <div class="spec"><small>Coated · Colour</small><h3>Deluxe Blue</h3><p>Blue-colour coated paper with a listed 12 GSM coating for colour effect.</p></div>
+      <div class="spec"><small>Uncoated</small><h3>Ordinary Duplex Board</h3><p>Uncoated / ordinary duplex board papers, as described in the company profile.</p></div>
+    </div>
+  </div>
+  <div class="section" style="padding-top:0">
+    <div class="eyebrow">Applications</div>
+    <h2>Made for packaging uses.</h2>
+    <div class="cards">
+      <article class="card"><div class="num">01</div><h3>Corrugated boxes</h3><p>Duplex board reels listed for use in corrugated box production.</p></article>
+      <article class="card"><div class="num">02</div><h3>Liners</h3><p>Paperboard used in liner applications within packaging.</p></article>
+      <article class="card"><div class="num">03</div><h3>Textile tubes</h3><p>One of the industrial uses named in the supplier profile.</p></article>
+      <article class="card"><div class="num">04</div><h3>Duplex cartons</h3><p>Board grades used in carton and packaging conversion.</p></article>
+      <article class="card"><div class="num">05</div><h3>Packaging</h3><p>The company profile identifies packaging as the main consumption area.</p></article>
+      <article class="card"><div class="num">06</div><h3>Reel supply</h3><p>The listed product supply format is reels; confirm specifications and availability directly.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="trade" class="page">
+  <div class="pagehero">
+    <div class="eyebrow">03 / Sales · exports · policies</div>
+    <h1>Trade details,<br><em style="color:var(--lime)">made transparent.</em></h1>
+    <p>Commercial information reproduced from the PaperIndex supplier profile. Confirm current terms, prices, specifications and availability with the company before placing an order.</p>
+  </div>
+  <div class="section">
+    <div class="sectionhead">
+      <div><div class="eyebrow">Sales &amp; trading details</div><h2>Domestic and<br>international supply.</h2></div>
+      <p>The profile lists a 50% export percentage and identifies Mundra as the nearest port.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Category</th><th>Detail</th><th>Listed value</th></tr></thead>
+        <tbody>
+          <tr><td>Domestic sales</td><td>Average lead time</td><td>7 days</td></tr>
+          <tr><td>Exports</td><td>Export percentage</td><td>50%</td></tr>
+          <tr><td>Exports</td><td>Average lead time</td><td>15 days</td></tr>
+          <tr><td>Exports</td><td>Nearest port</td><td>Mundra, India</td></tr>
+          <tr><td>Exports</td><td>Export destinations</td><td>UAE, China, African Countries</td></tr>
+          <tr><td>Sales</td><td>Languages spoken</td><td>English</td></tr>
+          <tr><td>Sales</td><td>Annual sales</td><td>Confidential</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section" style="padding-top:0">
+    <div class="eyebrow">Business terms &amp; policies</div>
+    <h2>Payment, delivery &amp; samples.</h2>
+    <div class="specgrid">
+      <div class="spec"><small>Payment terms</small><h3>30% advance</h3><p>30% at time of order and the rest before loading, OR 100% at sight if payment is done with L/C or D/P.</p></div>
+      <div class="spec"><small>Payment options</small><h3>D/P · L/C</h3><p>Documents Against Payment (D/P) and Letter of Credit (L/C).</p></div>
+      <div class="spec"><small>Preferred currency</small><h3>USD</h3><p>US Dollar is the preferred currency listed on the profile.</p></div>
+      <div class="spec"><small>Delivery terms</small><h3>EXW · CFR · FOB</h3><p>Ex-Works (EXW), Cost and Freight (CFR), and Free On Board (FOB).</p></div>
+      <div class="spec"><small>Sample terms</small><h3>Free sample</h3><p>Profile states the supplier sends a free sample and pays the shipping fee.</p></div>
+      <div class="spec"><small>Lead times</small><h3>7 / 15 days</h3><p>Average listed lead time: 7 days for domestic sales and 15 days for exports.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="network" class="page">
+  <div class="pagehero">
+    <div class="eyebrow">04 / Industry network</div>
+    <h1>Part of a wider<br><em style="color:var(--lime)">paper ecosystem.</em></h1>
+    <p>PaperIndex lists these businesses as similar companies. This is a directory relationship, not a claim of partnership, endorsement or verified current operating status.</p>
+  </div>
+  <div class="section">
+    <div class="eyebrow">Similar companies in Morbi</div>
+    <h2>Regional paper industry</h2>
+    <div class="companygrid">
+      <div class="company"><b>Park Paper</b><small>Morbi · Gujarat</small><p>Paperboard manufacturer using recycled waste paper; domestic and international markets.</p></div>
+      <div class="company"><b>Millennium Overseas</b><small>Morbi · Gujarat</small><p>Millenium Papers Pvt. Ltd., described as a manufacturer, supplier and exporter of coated duplex board, kraft, corrugated and fluting paper.</p></div>
+      <div class="company"><b>Palak Paper Mill LLP</b><small>Morbi · Gujarat</small><p>Manufacturer of papers used mostly in packaging and decorative laminates.</p></div>
+      <div class="company"><b>Diyan Papers LLP</b><small>Morbi · Gujarat</small><p>Duplex board manufacturer; profile description references recycling of waste paper.</p></div>
+      <div class="company"><b>Spento Papers India LLP</b><small>Morbi · Gujarat</small><p>Coated duplex board grey-back and white-back paper mill; manufacturer and exporter.</p></div>
+      <div class="company"><b>Ambani Paper LLP</b><small>Morbi · Gujarat</small><p>Upcoming coated duplex board mill; PaperIndex description states planned capacity of 450 tons per day.</p></div>
+      <div class="company"><b>Edicon Paper Product Pvt. Ltd.</b><small>Morbi · Gujarat</small><p>PaperIndex describes it as a major Western India paperboard manufacturer with 150,000 tonnes annual capacity.</p></div>
+      <div class="company"><b>Aricon Papers Pvt. Ltd.</b><small>Morbi · Gujarat</small><p>Manufacturer of kraft paper and white duplex board, with exports and multiple kraft grades.</p></div>
+      <div class="company"><b>Lemit Papers LLP</b><small>Morbi · Gujarat</small><p>PaperIndex describes a packaging-industry brand active in local and international markets.</p></div>
+      <div class="company"><b>Asiatic Global LLP</b><small>Morbi · Gujarat</small><p>Manufacturer and exporter of recycled kraft paper from 50 GSM onwards, listed at 18–32 BF.</p></div>
+    </div>
+  </div>
+  <div class="section" style="padding-top:0">
+    <div class="eyebrow">Similar companies · rest of India</div>
+    <h2>Across the country</h2>
+    <div class="companygrid">
+      <div class="company"><b>Rama Paper Mills Ltd.</b><small>New Delhi · Delhi</small><p>PaperIndex description references newsprint, duplex board, writing and printing paper made by recycling waste paper.</p></div>
+      <div class="company"><b>JK Paper Ltd.</b><small>New Delhi · Delhi</small><p>PaperIndex describes sustainable paper solutions and social farm forestry.</p></div>
+      <div class="company"><b>Venkraft Paper Mills (P) Ltd.</b><small>Hosur · Tamil Nadu</small><p>Two units near Bengaluru; listed combined capacity exceeds 100,000 tonnes per annum, including kraft paper and fluting media.</p></div>
+      <div class="company"><b>Magnum Ventures Limited</b><small>Sahibabad · Uttar Pradesh</small><p>PaperIndex describes a major northern India writing, printing paper and duplex board manufacturer, founded in 1980.</p></div>
+      <div class="company"><b>Godwin Industries</b><small>Delhi</small><p>PaperIndex description refers to PAPERPACK, a family-run group with 13 factories across India.</p></div>
+      <div class="company"><b>Bindlas International Ltd.</b><small>Muzaffarnagar · Uttar Pradesh</small><p>Part of the Bindal Group, described as an established paper-industry group in northern India.</p></div>
+      <div class="company"><b>TEC Papers Pvt. Ltd.</b><small>Ahmedabad · Gujarat</small><p>Listed product range includes tissue, posters, kraft, OTC, duplex, colour board and grey board.</p></div>
+      <div class="company"><b>Impression Packaging</b><small>Ahmedabad · Gujarat</small><p>Paper/board converter with polycoating, metallizing and gravure printing services.</p></div>
+      <div class="company"><b>Unique Packaging Solutions</b><small>Roorkee · Uttarakhand</small><p>PaperIndex description references kraft paper, test liner and fluting paper manufacturing.</p></div>
+      <div class="company"><b>Vishvakarma Paper and Boards Ltd.</b><small>Kashipur · Uttarakhand</small><p>Paper and board supplier with a broad product range.</p></div>
+    </div>
+  </div>
+  <div class="section" style="padding-top:0">
+    <div class="eyebrow">Similar companies · international</div>
+    <h2>Global directory references</h2>
+    <div class="companygrid">
+      <div class="company"><b>El-Salam PaperMill</b><small>Alexandria · Egypt</small><p>Established in 1978; PaperIndex describes it as an early paper-industry producer in Egypt and the Middle East.</p></div>
+      <div class="company"><b>Shin International Export</b><small>Jasaan · Misamis Oriental</small><p>Founded in 1984; described as a manufacturer with a broad selection of products.</p></div>
+      <div class="company"><b>Türkoğlu Cardboard and Paper Products</b><small>Istanbul · Turkey</small><p>Manufacturer and exporter of cardboard, paper and packaging products, including cake boards and confectionery boxes.</p></div>
+      <div class="company"><b>Shanghai HongTu Sunway Eco-Friendly Technology Inc.</b><small>China</small><p>PaperIndex description identifies a manufacturer of laminated grey board, duplex board and custom paperboard.</p></div>
+      <div class="company"><b>Strathcona Paper LP</b><small>Toronto · Ontario · Canada</small><p>Manufacturer of recycled clay-coated boxboard, including medium- to heavyweight grades.</p></div>
+      <div class="company"><b>Premtec Paper</b><small>Zhengzhou · Henan · China</small><p>Supplier listing includes printing paper, board, grey/white-back duplex board and stationery paper.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="page">
+  <div class="pagehero">
+    <div class="eyebrow">05 / Contact &amp; location</div>
+    <h1>Let’s talk<br><em style="color:var(--lime)">paperboard.</em></h1>
+    <p>Call, get directions or visit the website in one tap. Location, phone and hours come from the company’s Google Maps listing.</p>
+  </div>
+  <div class="section" style="padding-top:55px">
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <span class="statusdot" id="openStatus">Checking hours…</span>
+      <span style="font-size:12px;color:var(--muted)">Mon–Sun · 9:00 AM – 7:00 PM IST · 4.0 ★ (19 Google ratings)</span>
+    </div>
+    <div class="quickbar">
+      <a class="cta solid" href="tel:+912822294600">📞 Call +91 2822 294 600</a>
+      <a class="cta" href="https://www.google.com/maps/dir/?api=1&destination=22.761935,70.853526&destination_place_id=ChIJaQ49j3aTWTkR_1Q2UPPNxgo" target="_blank" rel="noopener">Get directions ↗</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=Soham+Papers+Pvt+Ltd&query_place_id=ChIJaQ49j3aTWTkR_1Q2UPPNxgo" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+      <a class="cta" href="http://sohampapers.com/" target="_blank" rel="noopener">Visit website ↗</a>
+    </div>
+    <div class="contactgrid3" style="margin-top:30px">
+      <div class="contactbox">
+        <div class="eyebrow">01 · Visit the mill</div>
+        <h3>Soham Papers Pvt Ltd</h3>
+        <div class="crow"><div><span>Address</span>S. No. 237/1-2-3, Navagam Road, Lilapar, Morbi, Gujarat 363641, India</div><button type="button" class="mini" onclick="copyVal('S. No. 237/1-2-3, Navagam Road, Lilapar, Morbi, Gujarat 363641, India','Address copied')">Copy</button></div>
+        <div class="crow"><div><span>Type</span>Duplex board manufacturer</div></div>
+        <div class="crow"><div><span>Google Maps</span><a href="https://www.google.com/maps/search/?api=1&query=Soham+Papers+Pvt+Ltd&query_place_id=ChIJaQ49j3aTWTkR_1Q2UPPNxgo" target="_blank" rel="noopener">View listing &amp; reviews ↗</a></div></div>
+      </div>
+      <div class="contactbox">
+        <div class="eyebrow">02 · Call &amp; hours</div>
+        <h3>Speak to the team</h3>
+        <div class="crow"><div><span>Telephone</span><a href="tel:+912822294600">+91 2822 294 600</a></div><button type="button" class="mini" onclick="copyVal('+91 2822 294 600','Phone number copied')">Copy</button></div>
+        <div class="crow"><div><span>Marketing contact (PaperIndex)</span>Jill Bhalodiya</div></div>
+        <table class="hours" id="hours">
+          <tbody>
+            <tr data-d="1"><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr data-d="5"><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>9:00 AM – 7:00 PM</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contactbox">
+        <div class="eyebrow">03 · Online profiles</div>
+        <h3>Official &amp; directory links</h3>
+        <div class="linklist">
+          <a href="http://sohampapers.com/" target="_blank" rel="noopener">sohampapers.com <small>Website ↗</small></a>
+          <a href="https://www.paperindex.com/profile/soham-papers-pvt-ltd/23121815/28050" target="_blank" rel="noopener">PaperIndex profile <small>Contact supplier ↗</small></a>
+          <a href="https://www.tofler.in/soham-papers-private-limited/company/U21000GJ2009PTC057665" target="_blank" rel="noopener">Company registration record <small>CIN U21000GJ2009PTC057665 ↗</small></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Soham+Papers+Pvt+Ltd&query_place_id=ChIJaQ49j3aTWTkR_1Q2UPPNxgo" target="_blank" rel="noopener">Google Maps listing <small>Reviews ↗</small></a>
+        </div>
+      </div>
+    </div>
+    <div class="enq" id="enquiry">
+      <div class="eyebrow">Quick enquiry</div>
+      <h2 style="font-size:clamp(24px,3.4vw,36px);margin:8px 0 0">Build your message, then send it your way.</h2>
+      <p style="color:var(--muted);font-size:13px;margin:8px 0 0;max-width:680px">No email address is verified for the company, so this builds a ready-to-send message. Share it by WhatsApp or email, or copy it and read it out on the call.</p>
+      <div class="enqgrid">
+        <div class="enqfields">
+          <div><label for="eName">Your name</label><input id="eName" placeholder="e.g. Rajesh Patel"></div>
+          <div><label for="eCompany">Company</label><input id="eCompany" placeholder="e.g. Prime Packaging"></div>
+          <div><label for="eDest">City / destination port</label><input id="eDest" placeholder="e.g. Jebel Ali, UAE"></div>
+          <div><label for="ePhone">Your phone / email</label><input id="ePhone" placeholder="So they can reply"></div>
+          <div><label for="eGrade">Board grade</label><select id="eGrade"><option>LWC duplex (12 GSM coating)</option><option>HWC duplex (24 GSM coating)</option><option>Deluxe Blue (12 GSM coating)</option><option>Uncoated / ordinary duplex</option></select></div>
+          <div><label for="eGsm">GSM (180–450)</label><input id="eGsm" type="number" min="180" max="450" step="10" value="250"></div>
+          <div><label for="eQty">Quantity</label><input id="eQty" value="15 MT (reels)"></div>
+          <div><label for="eType">I need</label><select id="eType"><option>a price quote</option><option>a free sample</option><option>export terms (L/C, D/P)</option></select></div>
+          <div class="full"><label for="eNotes">Notes (reel width, delivery date, etc.)</label><textarea id="eNotes" placeholder="Optional"></textarea></div>
+        </div>
+        <div class="enqprev">
+          <label for="ePreview">Message preview</label>
+          <textarea id="ePreview" readonly></textarea>
+          <div class="enqbtns">
+            <a class="cta solid span2" id="eWa" href="#" target="_blank" rel="noopener">Share on WhatsApp ↗</a>
+            <a class="cta" id="eMail" href="#">Email draft ↗</a>
+            <button type="button" class="cta" onclick="copyVal(document.getElementById('ePreview').value,'Message copied')">Copy message</button>
+            <a class="cta span2" href="tel:+912822294600">📞 Or call +91 2822 294 600</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mapwrap">
+      <div class="mapbar">
+        <span>📍 Navagam Road, Lilapar, Morbi — 22.7619° N, 70.8535° E</span>
+        <span>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=22.761935,70.853526&destination_place_id=ChIJaQ49j3aTWTkR_1Q2UPPNxgo" target="_blank" rel="noopener">Directions ↗</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Soham+Papers+Pvt+Ltd&query_place_id=ChIJaQ49j3aTWTkR_1Q2UPPNxgo" target="_blank" rel="noopener">Open in Maps ↗</a>
+        </span>
+      </div>
+      <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Soham Papers location map" src="https://maps.google.com/maps?q=22.761935,70.853526&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+  <div class="section" style="padding-top:0">
+    <div class="eyebrow">AI-assisted information desk</div>
+    <h2>Frequently asked questions</h2>
+    <p style="color:var(--muted);max-width:680px;line-height:1.8;font-size:13px">Quick answers based on the company profile. This on-page assistant uses the verified information embedded in this website; it is not a live company representative.</p>
+    <div class="faq" id="faq">
+      <details open><summary>What does Soham Papers manufacture?</summary><p>Coated and uncoated duplex board papers in different GSM from 180 to 450, supplied in reel form.</p></details>
+      <details><summary>What is the difference between LWC and HWC?</summary><p>The profile lists LWC with 12 GSM coating for a smooth, bright surface and HWC with 24 GSM coating for an ultra-smooth, glossy surface.</p></details>
+      <details><summary>What is Deluxe Blue duplex?</summary><p>A blue-colour coated paper with a listed 12 GSM coating for colour effect.</p></details>
+      <details><summary>What are the main applications?</summary><p>Corrugated boxes, liners, textile tubes and duplex cartons. Packaging is identified as the main consumption area.</p></details>
+      <details><summary>What is the export lead time?</summary><p>The PaperIndex profile lists an average export lead time of 15 days (7 days for domestic sales). Confirm current lead times directly.</p></details>
+      <details><summary>Which countries does Soham Papers export to?</summary><p>The profile lists UAE, China and African countries.</p></details>
+      <details><summary>Which port is nearest?</summary><p>Mundra, India is listed as the nearest port.</p></details>
+      <details><summary>What payment terms are listed?</summary><p>30% at order and the balance before loading, or 100% at sight when payment is through L/C or D/P.</p></details>
+      <details><summary>Are samples available?</summary><p>The profile says the supplier sends free samples and pays shipping. Confirm the current sample policy directly.</p></details>
+      <details><summary>Where is Soham Papers located?</summary><p>Navagam Road, Lilapar, Morbi, Gujarat 363641, India. Directions are on the Contact page.</p></details>
+      <details><summary>What are the opening hours?</summary><p>Google Maps lists 9:00 AM to 7:00 PM, every day of the week. Call ahead to confirm, especially on holidays.</p></details>
+      <details><summary>How do I contact Soham Papers?</summary><p>Call +91 2822 294 600 (from the Google Maps listing). PaperIndex names Jill Bhalodiya as the marketing contact.</p></details>
+      <details><summary>How is Soham Papers rated?</summary><p>It has a 4.0 rating from 19 Google Maps ratings.</p></details>
+    </div>
+    <div class="ask">
+      <input id="question" placeholder="Ask about products, GSM, exports, terms…">
+      <button type="button" class="cta" onclick="askFAQ()">Ask AI</button>
+    </div>
+    <div class="answer" id="answer" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>© SOHAM PAPERS · MORBI, INDIA</span>
+  <span>Company information compiled from public directory listings.</span>
+  <div class="footlinks">
+    <a href="#company" onclick="showPage('company');return false">Company</a>
+    <a href="#products" onclick="showPage('products');return false">Products</a>
+    <a href="#contact" onclick="showPage('contact');return false">Contact</a>
+  </div>
+</footer>
+
+<script>
+function showPage(id){
+  const target=document.getElementById(id);
+  const pageId=target&&target.classList.contains('page')?id:'home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===pageId));
+  document.querySelectorAll('nav a[data-page]').forEach(a=>a.classList.toggle('active',a.dataset.page===pageId));
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(location.hash!=='#'+pageId)history.replaceState(null,'','#'+pageId);
+}
+function syncHash(){
+  const id=location.hash.slice(1);
+  if(id&&document.getElementById(id)?.classList.contains('page'))showPage(id);
+}
+window.addEventListener('load',syncHash);
+window.addEventListener('hashchange',syncHash);
+
+const visual=document.getElementById('visual'),roll=document.getElementById('roll');
+function move(x,y){
+  const r=visual.getBoundingClientRect();
+  const dx=(x-r.left)/r.width-.5;
+  const dy=(y-r.top)/r.height-.5;
+  roll.style.transform=`rotateY(${-24+dx*28}deg) rotateX(${8-dy*20}deg) translateY(${-dy*9}px) scale(var(--s))`;
+}
+if(visual&&roll){
+  visual.addEventListener('mousemove',e=>move(e.clientX,e.clientY));
+  visual.addEventListener('touchmove',e=>{const t=e.touches[0];if(t)move(t.clientX,t.clientY)},{passive:true});
+  visual.addEventListener('mouseleave',()=>roll.style.transform='');
+  visual.addEventListener('touchend',()=>roll.style.transform='');
+}
+
+document.querySelectorAll('.card').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    c.style.transform=`perspective(800px) translateY(-7px) rotateX(${-y*5}deg) rotateY(${x*5}deg)`;
+  });
+  c.addEventListener('mouseleave',()=>c.style.transform='');
+});
+
+function askFAQ(){
+  const q=document.getElementById('question').value.toLowerCase().trim();
+  const a=document.getElementById('answer');
+  if(!q){a.textContent='Enter a question to get an answer.';return}
+  const entries=[
+    ['lead time|delivery time|how long|how fast|days','Average lead time is 7 days for domestic sales and 15 days for exports (PaperIndex). Confirm current lead times directly.'],
+    ['hour|open|timing|close|opening','Google Maps lists 9:00 AM to 7:00 PM, Monday to Sunday. Call ahead to confirm on holidays.'],
+    ['phone|call|telephone|number|contact|reach|jill|marketing','Call +91 2822 294 600 (Google Maps listing). PaperIndex names Jill Bhalodiya as Marketing Person.'],
+    ['rating|review|rated|stars','Soham Papers has a 4.0 rating from 19 ratings on Google Maps.'],
+    ['address|location|where|map|direction|located|morbi|lilapar','Navagam Road, Lilapar, Morbi, Gujarat 363641, India. Use Get directions on the Contact page.'],
+    ['website|site|web|email','The website listed by a third-party directory is sohampapers.com. No email is listed on the Maps listing; use the phone number above.'],
+    ['gsm|weight|thickness','The listed duplex board range is 180 to 450 GSM.'],
+    ['lwc|light weight|light-weight','LWC has a listed 12 GSM coating for a smooth and bright surface.'],
+    ['hwc|high weight|high-weight|glossy','HWC has a listed 24 GSM coating for an ultra-smooth, glossy surface.'],
+    ['blue|deluxe|colour|color','Deluxe Blue is blue-colour coated paper with a listed 12 GSM coating for colour effect.'],
+    ['uncoated|ordinary','Uncoated / ordinary duplex board is part of the listed range, supplied in reels.'],
+    ['application|used for|box|carton|textile|liner|packaging','Applications listed: corrugated boxes, liners, textile tubes and duplex cartons. Packaging is the main consumption area.'],
+    ['product|manufactur|make|produce|grade|reel','Soham Papers lists LWC and HWC coated duplex board, Deluxe Blue and uncoated duplex board, supplied in reels.'],
+    ['port|mundra','Mundra, India is listed as the nearest port.'],
+    ['export|country|countries|destination|uae|china|africa','Export share is listed at 50%, with UAE, China and African countries as destinations, Mundra as the nearest port, and a 15-day average lead time.'],
+    ['payment|l/c|d/p|advance|terms|currency|usd','Listed terms: 30% at order and the balance before loading, or 100% at sight via L/C or D/P. Preferred currency is USD; delivery terms are EXW, CFR and FOB.'],
+    ['sample','The profile says a free sample is sent and the supplier pays shipping. Confirm the current policy directly.'],
+    ['founded|established|year|since|2010|2009','PaperIndex lists the founding year as 2010; the company registration record shows incorporation on 29 July 2009.']
+  ];
+  let best=null,score=0;
+  for(const [keys,ans] of entries){
+    let sc=0;
+    for(const k of keys.split('|')){if(q.includes(k))sc+=k.length}
+    if(sc>score){score=sc;best=ans}
+  }
+  a.textContent=best||'I don’t have a verified answer for that in the profile data. Please call +91 2822 294 600 or check the PaperIndex profile.';
+}
+
+function toast2(m){
+  let t=document.getElementById('toast2');
+  if(!t){t=document.createElement('div');t.id='toast2';t.className='toast2';document.body.appendChild(t)}
+  t.textContent=m;
+  t.classList.add('show');
+  clearTimeout(t._h);
+  t._h=setTimeout(()=>t.classList.remove('show'),1800);
+}
+
+function copyVal(v,m){
+  const done=()=>toast2(m||'Copied');
+  if(navigator.clipboard&&window.isSecureContext){
+    navigator.clipboard.writeText(v).then(done,fallback);
+  }else{
+    fallback();
+  }
+  function fallback(){
+    const t=document.createElement('textarea');
+    t.value=v;
+    t.style.cssText='position:fixed;opacity:0;pointer-events:none;top:0;left:0';
+    document.body.appendChild(t);
+    t.select();
+    try{document.execCommand('copy')}catch(e){}
+    document.body.removeChild(t);
+    done();
+  }
+}
+
+function istNow(){
+  const p=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kolkata',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+  const g=t=>p.find(x=>x.type===t).value;
+  return{day:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),mins:(+g('hour')%24)*60+ +g('minute')};
+}
+
+function updateOpen(){
+  const el=document.getElementById('openStatus');
+  if(!el)return;
+  try{
+    const n=istNow(),open=n.mins>=540&&n.mins<1140;
+    el.className='statusdot '+(open?'open':'closed');
+    el.textContent=open?'Open now · closes 7:00 PM IST':'Closed now · opens 9:00 AM IST';
+    const r=document.querySelector('#hours tr[data-d="'+n.day+'"]');
+    document.querySelectorAll('#hours tr').forEach(x=>x.classList.toggle('today',x===r));
+  }catch(e){
+    el.textContent='Hours: 9:00 AM – 7:00 PM IST';
+  }
+}
+
+function buildEnquiry(){
+  const v=id=>document.getElementById(id).value.trim();
+  const msg=`Hello Soham Papers team,\n\nI would like ${v('eType')} for duplex board.\n\nGrade: ${v('eGrade')}\nGSM: ${v('eGsm')||'[GSM]'}\nQuantity: ${v('eQty')||'[quantity]'}\nDestination: ${v('eDest')||'[city / port]'}\n${v('eNotes')?'Notes: '+v('eNotes')+'\n':''}\nName: ${v('eName')||'[your name]'}\nCompany: ${v('eCompany')||'[company]'}\nReply to: ${v('ePhone')||'[phone / email]'}\n\nThank you.`;
+  document.getElementById('ePreview').value=msg;
+  document.getElementById('eWa').href='https://wa.me/?text='+encodeURIComponent(msg);
+  document.getElementById('eMail').href='mailto:?subject='+encodeURIComponent('Duplex board enquiry for Soham Papers Pvt Ltd')+'&body='+encodeURIComponent(msg);
+}
+
+document.querySelectorAll('#enquiry input,#enquiry select,#enquiry textarea').forEach(e=>{
+  if(e.id!=='ePreview'){
+    e.addEventListener('input',buildEnquiry);
+    e.addEventListener('change',buildEnquiry);
+  }
+});
+buildEnquiry();
+updateOpen();
+setInterval(updateOpen,60000);
+document.getElementById('question').addEventListener('keydown',e=>{if(e.key==='Enter')askFAQ()});
+</script>
+</body>
+</html>
