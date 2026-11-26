@@ -1,0 +1,2016 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soham Papers | Home — Engineered Paperboard</title>
+<meta name="description" content="Soham Papers Pvt Ltd — coated and uncoated duplex board manufacturer and exporter in Morbi, Gujarat, India (180–450 GSM in reel form).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #090d0c;
+  --panel: #111816;
+  --panel-2: #151e1b;
+  --cream: #e9e4d8;
+  --muted: #a7b0a9;
+  --lime: #c6e36a;
+  --lime-ink: #111b14;
+  --line: #29332e;
+  --gold: #c7a96b;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+
+/* Subtle film grain */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .065;
+  z-index: 5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+
+/* Sticky Header */
+header {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  border-bottom: 1px solid #ffffff14;
+  position: sticky;
+  top: 0;
+  background: #090d0ce8;
+  backdrop-filter: blur(18px);
+  z-index: 30;
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font: 800 15px Manrope, sans-serif;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+.mark {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--lime);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  color: var(--lime);
+  transform: rotate(45deg);
+}
+.mark span { transform: rotate(-45deg); }
+
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+nav a {
+  font-size: 11.5px;
+  color: #b9c0b8;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: .2s;
+  white-space: nowrap;
+}
+nav a:hover { color: var(--lime); }
+nav a.active {
+  color: var(--lime);
+  border-bottom-color: var(--lime);
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.rfq-btn {
+  border: 1px solid #536159;
+  color: var(--cream);
+  background: #131c19;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.rfq-btn:hover { border-color: var(--lime); color: var(--lime); }
+.rfq-count {
+  background: var(--lime);
+  color: var(--lime-ink);
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 99px;
+  font-size: 10px;
+}
+.navcta, .cta {
+  border: 1px solid var(--lime);
+  color: var(--lime);
+  padding: 11px 17px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: .25s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.navcta:hover, .cta:hover { background: var(--lime); color: var(--lime-ink); font-weight: 600; }
+.cta.solid { background: var(--lime); color: var(--lime-ink); font-weight: 700; }
+.cta.solid:hover { background: #d6ef84; }
+
+/* Dynamic Multi-Page Title & Stepper Sub-Bar */
+.titlebar {
+  background: #0d1412;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.page-pill {
+  color: var(--lime-ink);
+  background: var(--lime);
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+}
+.active-doc-title {
+  color: var(--cream);
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+.titlebar-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-btn {
+  background: #141d1a;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s;
+}
+.step-btn:hover { border-color: var(--lime); color: var(--lime); }
+
+/* Pages */
+.page { display: none; min-height: 75vh; }
+.page.active { display: block; animation: enter .45s ease both; }
+@keyframes enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Home Hero & 3D Interactive Reel */
+.hero {
+  min-height: 650px;
+  padding: 72px 8vw 65px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 34px;
+  overflow: hidden;
+  position: relative;
+}
+.eyebrow {
+  color: var(--lime);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.hero h1 {
+  font: 600 clamp(44px, 6.5vw, 86px)/1 Manrope, sans-serif;
+  letter-spacing: -4px;
+  margin: 20px 0;
+}
+.hero h1 em { font-style: normal; color: var(--lime); }
+.hero p {
+  max-width: 510px;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.ghost {
+  border: 1px solid #58645d;
+  color: var(--cream);
+  background: transparent;
+  padding: 11px 18px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .25s;
+}
+.ghost:hover { border-color: var(--lime); color: var(--lime); }
+
+.reel-stage-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.visual {
+  height: 440px;
+  position: relative;
+  perspective: 1000px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: radial-gradient(circle at 50% 45%, #18251f 0%, #0b100e 78%);
+  cursor: grab;
+  user-select: none;
+}
+.visual:active { cursor: grabbing; }
+.orb {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #536c46, #1c2c23 48%, #0a100d 72%);
+  filter: blur(1px);
+  box-shadow: 0 0 110px #9bc65b22;
+  transition: background .4s ease;
+}
+.roll {
+  width: 265px;
+  height: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-24deg) rotateX(8deg);
+  transition: transform .15s ease-out;
+  z-index: 2;
+  filter: drop-shadow(26px 26px 22px #0009);
+}
+.roll .body {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: repeating-linear-gradient(90deg, #d8d3c4 0 4px, #f4f0e4 5px 9px, #c8c2b2 10px 12px);
+  transform: translateZ(35px);
+  box-shadow: inset -30px 0 45px #6d6a5e55, inset 20px 0 30px #fff9;
+  transition: background .35s ease, box-shadow .35s ease;
+}
+.roll.grade-hwc .body {
+  background: repeating-linear-gradient(90deg, #eceae2 0 4px, #ffffff 5px 9px, #dcd9cf 10px 12px);
+  box-shadow: inset -25px 0 40px #7f7d7344, inset 24px 0 35px #ffffffcc;
+}
+.roll.grade-blue .body {
+  background: repeating-linear-gradient(90deg, #274f7a 0 4px, #5889bd 5px 9px, #1b3b5e 10px 12px);
+  box-shadow: inset -30px 0 45px #0b1c3099, inset 20px 0 30px #9cc7f566;
+}
+.roll.grade-uncoated .body {
+  background: repeating-linear-gradient(90deg, #b6ae9a 0 4px, #cbc3af 5px 9px, #9e9682 10px 12px);
+  box-shadow: inset -30px 0 45px #4e493d66, inset 15px 0 25px #e6dfcbaa;
+}
+.roll:before, .roll:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 76px;
+  height: 100%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(ellipse, #d9d4c7 0 3px, #aaa596 4px 5px);
+  transform: rotateY(90deg);
+}
+.roll:before { left: -38px; }
+.roll:after { right: -38px; }
+.rolllabel {
+  position: absolute;
+  z-index: 3;
+  top: 41%;
+  left: 8%;
+  width: 84%;
+  text-align: center;
+  color: #1c241c;
+  background: #f4f1e8cc;
+  border-top: 1px solid #59634f;
+  border-bottom: 1px solid #59634f;
+  padding: 10px 4px;
+  font: 800 12px Manrope, sans-serif;
+  letter-spacing: 2.5px;
+  transform: translateZ(39px);
+  border-radius: 3px;
+}
+.rolllabel small {
+  display: block;
+  font: 600 9px 'DM Sans', sans-serif;
+  letter-spacing: 1.5px;
+  margin-top: 3px;
+  color: #364234;
+}
+.drag-hint {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #0d1412cc;
+  border: 1px solid var(--line);
+  padding: 5px 9px;
+  border-radius: 4px;
+  z-index: 4;
+}
+.floatnote {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  border: 1px solid #ffffff2b;
+  background: #111b16dd;
+  padding: 14px 17px;
+  border-radius: 6px;
+  backdrop-filter: blur(12px);
+  font-size: 11px;
+  letter-spacing: .8px;
+  z-index: 4;
+}
+.floatnote b {
+  display: block;
+  color: var(--lime);
+  font: 700 20px Manrope, sans-serif;
+  margin-bottom: 2px;
+}
+
+/* Interactive Reel Controls under 3D stage */
+.reel-controls {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.grade-pills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.grade-pill {
+  background: #0c1210;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 8px 6px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s;
+}
+.grade-pill:hover { border-color: #6b7d72; color: var(--cream); }
+.grade-pill.active {
+  background: var(--lime);
+  color: var(--lime-ink);
+  border-color: var(--lime);
+  font-weight: 700;
+}
+.gsm-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.gsm-slider-row input[type="range"] {
+  flex: 1;
+  accent-color: var(--lime);
+  cursor: pointer;
+}
+.gsm-slider-row strong {
+  color: var(--lime);
+  font-family: Manrope, sans-serif;
+  min-width: 68px;
+  text-align: right;
+}
+
+/* Metrics Strip */
+.strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 8vw;
+  gap: 20px;
+  background: #0c1210;
+}
+.stat strong {
+  display: block;
+  font: 700 29px Manrope, sans-serif;
+  color: var(--lime);
+}
+.stat span {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* Sections & Cards */
+.section { padding: 82px 8vw; }
+.sectionhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+.section h2 {
+  font: 600 clamp(32px, 4.8vw, 54px)/1.06 Manrope, sans-serif;
+  letter-spacing: -2px;
+  margin: 12px 0 0;
+}
+.sectionhead p {
+  max-width: 420px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 26px;
+  min-height: 240px;
+  transition: .3s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover {
+  border-color: #9ab65b;
+  transform: translateY(-6px);
+}
+.card .num {
+  color: var(--lime);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.card h3 {
+  font: 600 21px Manrope, sans-serif;
+  margin: 22px 0 10px;
+}
+.card p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.72;
+  margin: 0 0 18px;
+}
+.productvisual {
+  height: 150px;
+  margin: -26px -26px 22px;
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #25332a, #101713);
+  display: grid;
+  place-items: center;
+}
+.sheet {
+  width: 125px;
+  height: 90px;
+  border-radius: 2px;
+  background: linear-gradient(140deg, #fffdf0, #b7b7a6);
+  box-shadow: 15px 12px 0 #b4b09e, 30px 24px 0 #76796b;
+  transform: rotate(-12deg);
+  transition: .4s;
+}
+.card:hover .sheet { transform: rotate(5deg) scale(1.07); }
+.blue { background: linear-gradient(135deg, #162e4b, #101713); }
+.blue .sheet { background: linear-gradient(140deg, #6c91b6, #183b66); }
+.dark { background: linear-gradient(135deg, #32332f, #101713); }
+.dark .sheet { background: linear-gradient(140deg, #77796f, #33372f); }
+
+/* Split & 3D Sheet Stack */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.featureimage {
+  min-height: 400px;
+  background: linear-gradient(145deg, #293c31, #0d1410);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  perspective: 900px;
+  cursor: pointer;
+}
+.stack {
+  width: 65%;
+  height: 205px;
+  position: relative;
+  transform: rotate(-13deg) rotateX(12deg);
+  transform-style: preserve-3d;
+  transition: transform .35s ease;
+}
+.featureimage:hover .stack { transform: rotate(-6deg) rotateX(4deg) scale(1.04); }
+.stack i {
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #f4f0df, #b9b5a5);
+  border: 1px solid #8d8c7e;
+  box-shadow: 0 18px 28px #0008;
+  transform: translateZ(var(--z));
+}
+.stack i:nth-child(2) { --z: -16px; }
+.stack i:nth-child(3) { --z: -32px; }
+.stack i:nth-child(4) { --z: -48px; }
+.featurecopy p {
+  color: var(--muted);
+  line-height: 1.85;
+  font-size: 14.5px;
+}
+.ticks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  margin-top: 26px;
+}
+.ticks span { font-size: 12.5px; color: #d4d9d0; }
+.ticks span:before { content: '↗'; color: var(--lime); margin-right: 9px; }
+
+/* Lime Band */
+.band {
+  padding: 66px 8vw;
+  background: var(--lime);
+  color: var(--lime-ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.band h2 {
+  font: 700 clamp(28px, 4vw, 46px)/1.1 Manrope, sans-serif;
+  margin: 0;
+  letter-spacing: -1.5px;
+}
+.band .cta { border-color: #172119; color: #172119; font-weight: 700; }
+.band .cta:hover { background: #172119; color: #d7ef8c; }
+
+/* Subpage Hero */
+.pagehero {
+  padding: 74px 8vw 50px;
+  border-bottom: 1px solid var(--line);
+  background: radial-gradient(ellipse at 80% 0%, #283b2d 0, transparent 48%);
+}
+.pagehero h1 {
+  font: 600 clamp(38px, 5.8vw, 68px)/1.04 Manrope, sans-serif;
+  letter-spacing: -2.8px;
+  margin: 14px 0;
+}
+.pagehero p {
+  color: var(--muted);
+  max-width: 670px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Interactive Product Spec Cards & Yield Estimator */
+.specgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.spec {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #101713;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.spec:hover { border-color: #4f6357; }
+.spec small {
+  color: var(--lime);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.spec h3 {
+  font: 600 20px Manrope, sans-serif;
+  margin: 10px 0 8px;
+}
+.spec p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+.config-box {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.config-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.field label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.field input, .field select {
+  width: 100%;
+  background: #090d0c;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 8px 9px;
+  color: var(--cream);
+  font-size: 12.5px;
+}
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: var(--lime);
+}
+.spec-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.spec-actions button { flex: 1; min-width: 130px; }
+
+/* Packaging Reel & Yield Calculator */
+.calc-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px;
+  margin-top: 28px;
+}
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 18px;
+}
+.calc-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.calc-outputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.calc-stat {
+  background: #0b100e;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 16px;
+}
+.calc-stat span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.calc-stat strong {
+  display: block;
+  font: 700 22px Manrope, sans-serif;
+  color: var(--lime);
+  margin-top: 6px;
+}
+
+/* Tables */
+.tablewrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 540px;
+}
+td, th {
+  text-align: left;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13.5px;
+}
+th {
+  color: var(--lime);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: #0d1412;
+}
+td { color: #cbd1c9; }
+tr:last-child td { border: 0; }
+
+/* Network Filter & Grid */
+.network-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter-tab {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 9px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .2s;
+}
+.filter-tab:hover { border-color: var(--lime); color: var(--cream); }
+.filter-tab.active {
+  background: var(--lime);
+  color: var(--lime-ink);
+  border-color: var(--lime);
+  font-weight: 700;
+}
+.search-box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: var(--cream);
+  min-width: 260px;
+  font-size: 13px;
+}
+.search-box:focus { outline: none; border-color: var(--lime); }
+
+.companygrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.company {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  background: #101713;
+  min-height: 155px;
+}
+.company b { font: 600 15.5px Manrope, sans-serif; }
+.company small {
+  display: block;
+  color: var(--lime);
+  margin: 8px 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.company p {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Contact, Google Maps & FAQ */
+.contactgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contactbox {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+.contactbox h3 { font: 600 22px Manrope, sans-serif; margin: 12px 0; }
+.contactbox p { color: var(--muted); line-height: 1.8; font-size: 13.5px; }
+.contactbox a { color: var(--lime); text-decoration: underline; }
+
+.map-wrap {
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--panel);
+}
+.map-bar {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.map-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.map {
+  width: 100%;
+  height: 310px;
+  border: 0;
+  display: block;
+  filter: grayscale(.85) invert(.9) contrast(.88);
+}
+
+.faq { max-width: 860px; }
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  font: 600 16px Manrope, sans-serif;
+}
+.faq summary:after {
+  content: '+';
+  float: right;
+  color: var(--lime);
+  font-size: 22px;
+}
+.faq details[open] summary:after { content: '−'; }
+.faq details p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.8;
+  max-width: 760px;
+}
+.ask {
+  display: flex;
+  gap: 9px;
+  margin-top: 26px;
+  max-width: 760px;
+}
+.ask input {
+  flex: 1;
+  min-width: 0;
+  background: #111816;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 14px;
+  color: white;
+}
+.answer {
+  color: var(--lime);
+  line-height: 1.7;
+  font-size: 13.5px;
+  margin-top: 14px;
+  max-width: 760px;
+}
+
+/* Bottom Page Stepper */
+.page-footer-nav {
+  padding: 0 8vw 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Slide-Over RFQ & Sample Tray Drawer */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #000000a6;
+  z-index: 50;
+  display: none;
+}
+.drawer-backdrop.open { display: block; }
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(440px, 95vw);
+  height: 100vh;
+  background: #0e1513;
+  border-left: 1px solid var(--line);
+  z-index: 60;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.drawer.open { transform: translateX(0); }
+.drawer-head {
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drawer-head h3 { font: 700 18px Manrope, sans-serif; margin: 0; }
+.drawer-body {
+  padding: 20px 22px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.tray-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 13px 14px;
+  position: relative;
+}
+.tray-item b { font: 600 14px Manrope, sans-serif; display: block; padding-right: 24px; }
+.tray-item small { color: var(--lime); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.tray-item p { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+.remove-item {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 15px;
+}
+.remove-item:hover { color: #ff7b7b; }
+.drawer-foot {
+  padding: 18px 22px;
+  border-top: 1px solid var(--line);
+  background: #0b110f;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.summary-preview {
+  width: 100%;
+  min-height: 120px;
+  background: #090d0c;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--cream);
+  font-size: 11.5px;
+  line-height: 1.55;
+  resize: vertical;
+}
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(90px);
+  background: var(--lime);
+  color: var(--lime-ink);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px #0009;
+  z-index: 80;
+  transition: transform .3s ease;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 8vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #818d84;
+  font-size: 11px;
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+}
+.footlinks { display: flex; gap: 18px; flex-wrap: wrap; }
+.footlinks a:hover { color: var(--lime); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  header { padding: 12px 5vw; flex-wrap: wrap; }
+  nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 4px; gap: 16px; }
+  .hero { grid-template-columns: 1fr; padding: 54px 7vw 35px; }
+  .visual { height: 360px; }
+  .strip { grid-template-columns: repeat(2, 1fr); }
+  .cards, .companygrid { grid-template-columns: 1fr 1fr; }
+  .split, .contactgrid, .calc-grid { grid-template-columns: 1fr; }
+  .section { padding: 65px 7vw; }
+}
+@media (max-width: 600px) {
+  .navcta { display: none; }
+  .hero h1 { letter-spacing: -2.5px; }
+  .cards, .companygrid, .specgrid, .calc-inputs, .config-row { grid-template-columns: 1fr; }
+  .grade-pills { grid-template-columns: repeat(2, 1fr); }
+  .sectionhead { display: block; }
+  .sectionhead p { margin-top: 12px; }
+  .band { align-items: flex-start; flex-direction: column; }
+  .ticks { grid-template-columns: 1fr; }
+  footer { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- Sticky Multi-Page Header -->
+<header>
+  <a class="brand" href="#home" onclick="showPage('home');return false">
+    <span class="mark"><span>SP</span></span> SOHAM PAPERS
+  </a>
+  <nav id="mainNav" aria-label="Primary pages">
+    <a href="#home" data-page="home" class="active" onclick="showPage('home');return false">Home</a>
+    <a href="#company" data-page="company" onclick="showPage('company');return false">Company</a>
+    <a href="#products" data-page="products" onclick="showPage('products');return false">Products</a>
+    <a href="#trade" data-page="trade" onclick="showPage('trade');return false">Trade &amp; Terms</a>
+    <a href="#network" data-page="network" onclick="showPage('network');return false">Industry Network</a>
+    <a href="#contact" data-page="contact" onclick="showPage('contact');return false">Contact</a>
+  </nav>
+  <div class="header-actions">
+    <button class="rfq-btn" onclick="toggleDrawer(true)" aria-label="Open RFQ and Sample Tray">
+      RFQ Tray <span class="rfq-count" id="rfqCount">0</span>
+    </button>
+    <button class="navcta" onclick="showPage('contact')">Enquire ↗</button>
+  </div>
+</header>
+
+<!-- Dynamic Page Title & Multi-Page Bar -->
+<div class="titlebar">
+  <div class="titlebar-left">
+    <span class="page-pill" id="pageNumberBadge">PAGE 01 / 06</span>
+    <span class="active-doc-title" id="activeDocTitle">Soham Papers | Home — Engineered Paperboard</span>
+  </div>
+  <div class="titlebar-nav">
+    <button class="step-btn" onclick="stepPage(-1)">← Prev</button>
+    <button class="step-btn" onclick="stepPage(1)">Next →</button>
+  </div>
+</div>
+
+<main>
+  <!-- ==================== PAGE 1: HOME ==================== -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Paperboard manufacturing · Morbi, India</div>
+        <h1>Material for<br><em>what’s next.</em></h1>
+        <p>Coated and uncoated duplex board papers engineered for packaging applications (180–450 GSM in reel form). Explore the Soham Papers product range, trade information and company profile.</p>
+        <div class="hero-actions">
+          <button class="cta solid" onclick="showPage('products')">Explore products ↗</button>
+          <button class="ghost" onclick="showPage('company')">Discover Soham</button>
+        </div>
+      </div>
+
+      <!-- Interactive 3D Paperboard Reel Studio -->
+      <div class="reel-stage-wrap">
+        <div class="visual" id="visual">
+          <span class="drag-hint">Drag or move cursor to inspect 3D reel</span>
+          <div class="orb" id="orb"></div>
+          <div class="roll" id="roll">
+            <div class="body"></div>
+            <div class="rolllabel">SOHAM<br>PAPERS<small id="reelGradeTag">LWC DUPLEX · 250 GSM</small></div>
+          </div>
+          <div class="floatnote">
+            <b id="floatGsm">180–450 GSM</b>
+            <span id="floatGrade">LWC Duplex · 12 GSM Coating</span>
+          </div>
+        </div>
+
+        <div class="reel-controls">
+          <div class="grade-pills" id="heroGradePills">
+            <button class="grade-pill active" onclick="setHeroReelGrade('lwc', this)">LWC 12 GSM</button>
+            <button class="grade-pill" onclick="setHeroReelGrade('hwc', this)">HWC 24 GSM</button>
+            <button class="grade-pill" onclick="setHeroReelGrade('blue', this)">Deluxe Blue</button>
+            <button class="grade-pill" onclick="setHeroReelGrade('uncoated', this)">Uncoated</button>
+          </div>
+          <div class="gsm-slider-row">
+            <span>Substance (GSM):</span>
+            <input type="range" id="heroGsmSlider" min="180" max="450" step="10" value="250" oninput="setHeroReelGsm(this.value)">
+            <strong id="heroGsmReadout">250 GSM</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div class="stat"><strong>2010</strong><span>Founded in · PaperIndex profile</span></div>
+      <div class="stat"><strong>180–450</strong><span>GSM product range</span></div>
+      <div class="stat"><strong>50%</strong><span>Export percentage · listed profile</span></div>
+      <div class="stat"><strong>15 days</strong><span>Average export lead time</span></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow">What we make</div>
+          <h2>Board built for<br>real-world packaging.</h2>
+        </div>
+        <p>Different finishes and board types for packaging converters and industrial applications. Product details below are transcribed from the supplied PaperIndex profile.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div>
+            <div class="productvisual"><div class="sheet"></div></div>
+            <div class="num">01 / COATED</div>
+            <h3>LWC &amp; HWC Duplex</h3>
+            <p>Light-weight (12 GSM coating) and high-weight (24 GSM coating) coated duplex board, with smooth, bright or ultra-smooth glossy surface options.</p>
+          </div>
+          <button class="cta" onclick="showPage('products')">Configure LWC / HWC ↗</button>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="productvisual blue"><div class="sheet"></div></div>
+            <div class="num">02 / COATED</div>
+            <h3>Deluxe Blue</h3>
+            <p>Blue-colour coated duplex paper with a listed 12 GSM coating for colour effect.</p>
+          </div>
+          <button class="cta" onclick="showPage('products')">Configure Deluxe Blue ↗</button>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="productvisual dark"><div class="sheet"></div></div>
+            <div class="num">03 / UNCOATED</div>
+            <h3>Ordinary Duplex</h3>
+            <p>Uncoated / ordinary duplex board papers for packaging and related applications.</p>
+          </div>
+          <button class="cta" onclick="showPage('products')">Configure Uncoated ↗</button>
+        </article>
+      </div>
+    </div>
+
+    <div class="band">
+      <h2>Looking for the right board<br>for your next packaging run?</h2>
+      <button class="cta" onclick="showPage('contact')">Connect with Soham ↗</button>
+    </div>
+
+    <div class="page-footer-nav" style="padding-top:34px">
+      <span style="color:var(--muted);font-size:12px">Page 01 of 06 · Home</span>
+      <button class="cta" onclick="showPage('company')">Next: Company Profile →</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 2: COMPANY ==================== -->
+  <section id="company" class="page">
+    <div class="pagehero">
+      <div class="eyebrow">01 / Company profile</div>
+      <h1>Built around board.<br><em style="color:var(--lime)">Focused on quality.</em></h1>
+      <p>Soham Papers Pvt Ltd is described on its PaperIndex profile as a duplex board manufacturer based in Gujarat, India, and a manufacturer and exporter.</p>
+    </div>
+
+    <div class="section split">
+      <div class="featureimage" title="Multi-ply coated & uncoated duplex board layers">
+        <div class="stack"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="featurecopy">
+        <div class="eyebrow">Company overview</div>
+        <h2>Quality at a<br>reasonable cost.</h2>
+        <p>The company profile states that Soham Papers manufactures different types of coated and uncoated duplex board papers in different GSM, from 180 to 450. Products are supplied in reel form and are used for making corrugated boxes, liners, textile tubes and duplex cartons, with packaging identified as the main consumption area.</p>
+        <p>The stated USP is customer satisfaction and good quality at reasonable cost.</p>
+        <div class="ticks">
+          <span>Manufacturer &amp; exporter</span>
+          <span>Private limited company</span>
+          <span>Coated board range</span>
+          <span>Uncoated board range</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="eyebrow">Company facts</div>
+      <h2>At a glance</h2>
+      <div class="tablewrap" style="margin-top:20px">
+        <table>
+          <tbody>
+            <tr><th>Field</th><th>Listed information</th></tr>
+            <tr><td>Company name</td><td>Soham Papers Pvt Ltd</td></tr>
+            <tr><td>Founded in</td><td>2010 (PaperIndex profile)</td></tr>
+            <tr><td>Incorporation date</td><td>29 July 2009 (MCA / Tofler corporate records)</td></tr>
+            <tr><td>Company type</td><td>Private Limited</td></tr>
+            <tr><td>Business type</td><td>Manufacturer, Exporter</td></tr>
+            <tr><td>Primary focus</td><td>Coated and uncoated duplex board / paper</td></tr>
+            <tr><td>Product format</td><td>Reels (180–450 GSM)</td></tr>
+            <tr><td>Languages spoken</td><td>English</td></tr>
+            <tr><td>Annual sales</td><td>Confidential (PaperIndex)</td></tr>
+            <tr><td>Marketing contact</td><td>Jill Bhalodiya · Marketing Person</td></tr>
+            <tr><td>PaperIndex member since</td><td>December 2018</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color:var(--muted);font-size:11.5px;line-height:1.7;margin-top:14px">Note: PaperIndex lists the profile founding year as 2010. Other company-directory records (MCA / Tofler) report incorporation on 29 July 2009. These are different data fields from different sources and are both retained rather than silently reconciled.</p>
+    </div>
+
+    <div class="page-footer-nav">
+      <button class="ghost" onclick="showPage('home')">← Prev: Home</button>
+      <button class="cta" onclick="showPage('products')">Next: Duplex Board Products →</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 3: PRODUCTS ==================== -->
+  <section id="products" class="page">
+    <div class="pagehero">
+      <div class="eyebrow">02 / Product portfolio</div>
+      <h1>Surface. Substance.<br><em style="color:var(--lime)">Performance.</em></h1>
+      <p>Duplex board products listed by Soham Papers, including coated and uncoated grades, with a stated range of 180–450 GSM supplied in reel form. Configure specifications below to build an RFQ or request a free sample (supplier pays shipping).</p>
+    </div>
+
+    <div class="section">
+      <div class="specgrid">
+        <!-- Grade 1: LWC -->
+        <div class="spec">
+          <div>
+            <small>Coated · LWC</small>
+            <h3>Light Weight Coated Duplex</h3>
+            <p>Listed coating: 12 GSM. Designed for a smooth and bright surface. Supplied in reel form (180–450 GSM).</p>
+          </div>
+          <div class="config-box">
+            <div class="config-row">
+              <div class="field">
+                <label>GSM (180–450)</label>
+                <input type="number" id="gsm-lwc" min="180" max="450" step="10" value="230">
+              </div>
+              <div class="field">
+                <label>Qty (MT / Reels)</label>
+                <input type="text" id="qty-lwc" value="10 MT">
+              </div>
+              <div class="field">
+                <label>Incoterm</label>
+                <select id="term-lwc">
+                  <option value="FOB Mundra">FOB Mundra</option>
+                  <option value="CFR">CFR</option>
+                  <option value="EXW Morbi">EXW Morbi</option>
+                </select>
+              </div>
+            </div>
+            <div class="spec-actions">
+              <button class="cta solid" onclick="addProductToTray('Light Weight Coated Duplex (LWC · 12 GSM Coating)', 'lwc', 'Bulk RFQ')">+ Add to RFQ</button>
+              <button class="cta" onclick="addProductToTray('Light Weight Coated Duplex (LWC · 12 GSM Coating)', 'lwc', 'Free Sample')">Order Free Sample</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grade 2: HWC -->
+        <div class="spec">
+          <div>
+            <small>Coated · HWC</small>
+            <h3>High Weight Coated Duplex</h3>
+            <p>Listed coating: 24 GSM. Described as having an ultra-smooth and glossy surface. Supplied in reel form (180–450 GSM).</p>
+          </div>
+          <div class="config-box">
+            <div class="config-row">
+              <div class="field">
+                <label>GSM (180–450)</label>
+                <input type="number" id="gsm-hwc" min="180" max="450" step="10" value="300">
+              </div>
+              <div class="field">
+                <label>Qty (MT / Reels)</label>
+                <input type="text" id="qty-hwc" value="15 MT">
+              </div>
+              <div class="field">
+                <label>Incoterm</label>
+                <select id="term-hwc">
+                  <option value="FOB Mundra">FOB Mundra</option>
+                  <option value="CFR">CFR</option>
+                  <option value="EXW Morbi">EXW Morbi</option>
+                </select>
+              </div>
+            </div>
+            <div class="spec-actions">
+              <button class="cta solid" onclick="addProductToTray('High Weight Coated Duplex (HWC · 24 GSM Coating)', 'hwc', 'Bulk RFQ')">+ Add to RFQ</button>
+              <button class="cta" onclick="addProductToTray('High Weight Coated Duplex (HWC · 24 GSM Coating)', 'hwc', 'Free Sample')">Order Free Sample</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grade 3: Deluxe Blue -->
+        <div class="spec">
+          <div>
+            <small>Coated · Colour</small>
+            <h3>Deluxe Blue</h3>
+            <p>Blue-colour coated paper with a listed 12 GSM coating for colour effect. Supplied in reel form (180–450 GSM).</p>
+          </div>
+          <div class="config-box">
+            <div class="config-row">
+              <div class="field">
+                <label>GSM (180–450)</label>
+                <input type="number" id="gsm-blue" min="180" max="450" step="10" value="250">
+              </div>
+              <div class="field">
+                <label>Qty (MT / Reels)</label>
+                <input type="text" id="qty-blue" value="10 MT">
+              </div>
+              <div class="field">
+                <label>Incoterm</label>
+                <select id="term-blue">
+                  <option value="FOB Mundra">FOB Mundra</option>
+                  <option value="CFR">CFR</option>
+                  <option value="EXW Morbi">EXW Morbi</option>
+                </select>
+              </div>
+            </div>
+            <div class="spec-actions">
+              <button class="cta solid" onclick="addProductToTray('Deluxe Blue Coated Duplex (12 GSM Colour Coating)', 'blue', 'Bulk RFQ')">+ Add to RFQ</button>
+              <button class="cta" onclick="addProductToTray('Deluxe Blue Coated Duplex (12 GSM Colour Coating)', 'blue', 'Free Sample')">Order Free Sample</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grade 4: Ordinary Uncoated -->
+        <div class="spec">
+          <div>
+            <small>Uncoated</small>
+            <h3>Ordinary Duplex Board</h3>
+            <p>Uncoated / ordinary duplex board papers, as described in the company profile. Supplied in reel form (180–450 GSM).</p>
+          </div>
+          <div class="config-box">
+            <div class="config-row">
+              <div class="field">
+                <label>GSM (180–450)</label>
+                <input type="number" id="gsm-uncoated" min="180" max="450" step="10" value="220">
+              </div>
+              <div class="field">
+                <label>Qty (MT / Reels)</label>
+                <input type="text" id="qty-uncoated" value="20 MT">
+              </div>
+              <div class="field">
+                <label>Incoterm</label>
+                <select id="term-uncoated">
+                  <option value="EXW Morbi">EXW Morbi</option>
+                  <option value="FOB Mundra">FOB Mundra</option>
+                  <option value="CFR">CFR</option>
+                </select>
+              </div>
+            </div>
+            <div class="spec-actions">
+              <button class="cta solid" onclick="addProductToTray('Ordinary Duplex Board (Uncoated)', 'uncoated', 'Bulk RFQ')">+ Add to RFQ</button>
+              <button class="cta" onclick="addProductToTray('Ordinary Duplex Board (Uncoated)', 'uncoated', 'Free Sample')">Order Free Sample</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packaging Reel & Yield Estimator (Physical Math Only — Zero Invented Prices) -->
+      <div class="calc-panel">
+        <div class="eyebrow">Packaging Converter Utility</div>
+        <h3 style="font:600 22px Manrope, sans-serif;margin:8px 0 4px">Reel Length &amp; Area Yield Estimator</h3>
+        <p style="color:var(--muted);font-size:13px;margin:0">Calculate physical surface area and linear meters per metric ton based on target GSM and reel deckle width. Request exact mill quotation in USD via the RFQ Tray.</p>
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="field">
+              <label>Board GSM (180–450)</label>
+              <input type="number" id="calcGsm" min="180" max="450" value="250" oninput="updateYieldCalc()">
+            </div>
+            <div class="field">
+              <label>Reel Deckle Width (cm)</label>
+              <input type="number" id="calcWidth" min="30" max="300" value="85" oninput="updateYieldCalc()">
+            </div>
+            <div class="field">
+              <label>Order Tonnage (MT)</label>
+              <input type="number" id="calcTons" min="1" max="500" value="10" oninput="updateYieldCalc()">
+            </div>
+          </div>
+          <div class="calc-outputs">
+            <div class="calc-stat">
+              <span>Area per Metric Ton</span>
+              <strong id="outAreaPerTon">4,000 m²</strong>
+            </div>
+            <div class="calc-stat">
+              <span>Linear Length per Ton</span>
+              <strong id="outLengthPerTon">4,706 m</strong>
+            </div>
+            <div class="calc-stat">
+              <span>Total Order Area</span>
+              <strong id="outTotalArea">40,000 m²</strong>
+            </div>
+            <div class="calc-stat">
+              <span>Quoted Currency</span>
+              <strong>USD (On Request)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="eyebrow">Applications</div>
+      <h2>Made for packaging uses.</h2>
+      <div class="cards" style="margin-top:24px">
+        <article class="card"><div class="num">01</div><h3>Corrugated boxes</h3><p>Duplex board reels listed for use in corrugated box production.</p></article>
+        <article class="card"><div class="num">02</div><h3>Liners</h3><p>Paperboard used in liner applications within packaging.</p></article>
+        <article class="card"><div class="num">03</div><h3>Textile tubes</h3><p>One of the industrial uses named in the supplier profile.</p></article>
+        <article class="card"><div class="num">04</div><h3>Duplex cartons</h3><p>Board grades used in carton and packaging conversion.</p></article>
+        <article class="card"><div class="num">05</div><h3>Packaging</h3><p>The company profile identifies packaging as the main consumption area.</p></article>
+        <article class="card"><div class="num">06</div><h3>Reel supply</h3><p>The listed product supply format is reels; confirm specifications and availability directly.</p></article>
+      </div>
+    </div>
+
+    <div class="page-footer-nav">
+      <button class="ghost" onclick="showPage('company')">← Prev: Company Profile</button>
+      <button class="cta" onclick="showPage('trade')">Next: Trade &amp; Terms →</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 4: TRADE & TERMS ==================== -->
+  <section id="trade" class="page">
+    <div class="pagehero">
+      <div class="eyebrow">03 / Sales · exports · policies</div>
+      <h1>Trade details,<br><em style="color:var(--lime)">made transparent.</em></h1>
+      <p>Commercial information reproduced from the PaperIndex supplier profile. Confirm current terms, prices, specifications and availability with the company before placing an order.</p>
+    </div>
+
+    <div class="section">
+      <div class="sectionhead">
+        <div>
+          <div class="eyebrow">Sales &amp; trading details</div>
+          <h2>Domestic and<br>international supply.</h2>
+        </div>
+        <p>The profile lists a 50% export percentage and identifies Mundra as the nearest port.</p>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th>Category</th><th>Detail</th><th>Listed value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Domestic sales</td><td>Average lead time</td><td>7 days</td></tr>
+            <tr><td>Exports</td><td>Export percentage</td><td>50%</td></tr>
+            <tr><td>Exports</td><td>Average lead time</td><td>15 days</td></tr>
+            <tr><td>Exports</td><td>Nearest port</td><td>Mundra, India</td></tr>
+            <tr><td>Exports</td><td>Export destinations</td><td>UAE, China, African Countries</td></tr>
+            <tr><td>Sales</td><td>Languages spoken</td><td>English</td></tr>
+            <tr><td>Sales</td><td>Annual sales</td><td>Confidential</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="eyebrow">Business terms &amp; policies</div>
+      <h2>Payment, delivery &amp; samples.</h2>
+      <div class="specgrid" style="margin-top:24px">
+        <div class="spec"><small>Payment terms</small><h3>30% advance</h3><p>30% at time of order and the rest before loading, OR 100% at sight if payment is done with L/C or D/P.</p></div>
+        <div class="spec"><small>Payment options</small><h3>D/P · L/C</h3><p>Documents Against Payment (D/P) and Letter of Credit (L/C).</p></div>
+        <div class="spec"><small>Preferred currency</small><h3>USD</h3><p>US Dollar is the preferred currency listed on the profile.</p></div>
+        <div class="spec"><small>Delivery terms</small><h3>EXW · CFR · FOB</h3><p>Ex-Works (EXW), Cost and Freight (CFR), and Free On Board (FOB).</p></div>
+        <div class="spec"><small>Sample terms</small><h3>Free sample</h3><p>Profile states the supplier sends a free sample and pays the shipping fee.</p></div>
+        <div class="spec"><small>Lead times</small><h3>7 / 15 days</h3><p>Average listed lead time: 7 days for domestic sales and 15 days for exports.</p></div>
+      </div>
+    </div>
+
+    <div class="page-footer-nav">
+      <button class="ghost" onclick="showPage('products')">← Prev: Products</button>
+      <button class="cta" onclick="showPage('network')">Next: Industry Network →</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 5: INDUSTRY NETWORK ==================== -->
+  <section id="network" class="page">
+    <div class="pagehero">
+      <div class="eyebrow">04 / Industry network</div>
+      <h1>Part of a wider<br><em style="color:var(--lime)">paper ecosystem.</em></h1>
+      <p>PaperIndex lists these 26 businesses as similar companies. This is a directory relationship, not a claim of partnership, endorsement or verified current operating status.</p>
+    </div>
+
+    <div class="section">
+      <div class="network-controls">
+        <div class="filter-tabs" id="networkTabs">
+          <button class="filter-tab active" onclick="filterNetwork('all', this)">All (26)</button>
+          <button class="filter-tab" onclick="filterNetwork('morbi', this)">Morbi · Gujarat (10)</button>
+          <button class="filter-tab" onclick="filterNetwork('india', this)">Rest of India (10)</button>
+          <button class="filter-tab" onclick="filterNetwork('intl', this)">International (6)</button>
+        </div>
+        <input class="search-box" id="networkSearch" placeholder="Filter by company name, city, or grade..." oninput="filterNetworkSearch()">
+      </div>
+
+      <div class="companygrid" id="networkGrid"></div>
+    </div>
+
+    <div class="page-footer-nav">
+      <button class="ghost" onclick="showPage('trade')">← Prev: Trade &amp; Terms</button>
+      <button class="cta" onclick="showPage('contact')">Next: Contact &amp; Location →</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 6: CONTACT ==================== -->
+  <section id="contact" class="page">
+    <div class="pagehero">
+      <div class="eyebrow">05 / Contact &amp; location</div>
+      <h1>Let’s talk<br><em style="color:var(--lime)">paperboard.</em></h1>
+      <p>Use the location and contact information below to reach Soham Papers. The profile names Jill Bhalodiya as the marketing contact; verify current contact details before sending commercial or personal information.</p>
+    </div>
+
+    <div class="section">
+      <div class="contactgrid">
+        <div class="contactbox">
+          <div class="eyebrow">Company location</div>
+          <h3>Soham Papers Pvt Ltd</h3>
+          <p>Navagam Road, Lilapar<br>Morbi, Gujarat 363641<br>India</p>
+          <p><b>Marketing contact:</b> Jill Bhalodiya<br><b>Role:</b> Marketing Person<br><b>PaperIndex member since:</b> Dec 2018</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Soham+Papers+Navagam+Road+Lilapar+Morbi+Gujarat+363641" target="_blank" rel="noopener">Open location &amp; photos in Google Maps ↗</a>
+        </div>
+
+        <div class="contactbox">
+          <div class="eyebrow">Directory contact</div>
+          <h3>Reach the company</h3>
+          <p>PaperMart Directory lists the telephone number below. It is a third-party directory listing and should be verified before use.</p>
+          <p><b>Telephone:</b> +91 02822 294600</p>
+          <p><b>Website:</b> <a href="https://sohampapers.com" target="_blank" rel="noopener">sohampapers.com</a> (listed by Tofler; verify current site status)</p>
+          <p><b>PaperIndex profile:</b><br><a href="https://www.paperindex.com/profile/soham-papers-pvt-ltd/23121815/28050" target="_blank" rel="noopener">View original supplier profile ↗</a></p>
+        </div>
+      </div>
+
+      <!-- Interactive Google Maps Location & Export Port Switcher -->
+      <div class="map-wrap">
+        <div class="map-bar">
+          <div class="map-tabs">
+            <button class="filter-tab active" id="mapBtnMill" onclick="switchMap('mill')">Morbi Facility · Navagam Rd, Lilapar</button>
+            <button class="filter-tab" id="mapBtnPort" onclick="switchMap('port')">Nearest Export Port · Mundra, Gujarat</button>
+          </div>
+          <a id="mapExternalLink" href="https://www.google.com/maps/search/?api=1&query=Soham+Papers+Navagam+Road+Lilapar+Morbi+Gujarat+363641" target="_blank" rel="noopener" style="font-size:11px;color:var(--lime);text-decoration:underline">View Photos &amp; Directions on Google Maps ↗</a>
+        </div>
+        <iframe id="mapFrame" class="map" loading="lazy" title="Google Maps view of Soham Papers Pvt Ltd" src="https://maps.google.com/maps?q=Soham%20Papers%20Navagam%20Road%20Lilapar%20Morbi%20Gujarat%20363641&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="eyebrow">AI-assisted information desk</div>
+      <h2>Frequently asked questions</h2>
+      <p style="color:var(--muted);max-width:680px;line-height:1.8;font-size:13.5px">Quick answers based on the company profile. This on-page assistant uses the verified information embedded in this website; it is not a live company representative.</p>
+      <div class="faq" id="faq">
+        <details open><summary>What does Soham Papers manufacture?</summary><p>Coated and uncoated duplex board papers in different GSM from 180 to 450, supplied in reel form.</p></details>
+        <details><summary>What is the difference between LWC and HWC?</summary><p>The profile lists LWC with 12 GSM coating for a smooth, bright surface and HWC with 24 GSM coating for an ultra-smooth, glossy surface.</p></details>
+        <details><summary>What is Deluxe Blue duplex?</summary><p>A blue-colour coated paper with a listed 12 GSM coating for colour effect.</p></details>
+        <details><summary>What are the main applications?</summary><p>Corrugated boxes, liners, textile tubes and duplex cartons. Packaging is identified as the main consumption area.</p></details>
+        <details><summary>What is the export lead time?</summary><p>The PaperIndex profile lists an average export lead time of 15 days. Confirm current lead times directly.</p></details>
+        <details><summary>Which countries does Soham Papers export to?</summary><p>The profile lists UAE, China and African countries.</p></details>
+        <details><summary>Which port is nearest?</summary><p>Mundra, India is listed as the nearest port.</p></details>
+        <details><summary>What payment terms are listed?</summary><p>30% at order and the balance before loading, or 100% at sight when payment is through L/C or D/P.</p></details>
+        <details><summary>Are samples available?</summary><p>The profile says free samples are sent and shipping is paid by the supplier. Confirm the current sample policy directly.</p></details>
+        <details><summary>Where is Soham Papers located?</summary><p>Navagam Road, Lilapar, Morbi, Gujarat 363641, India.</p></details>
+      </div>
+      <div class="ask">
+        <input id="question" placeholder="Ask about products, GSM, exports, terms…">
+        <button class="cta" onclick="askFAQ()">Ask AI</button>
+      </div>
+      <div class="answer" id="answer" aria-live="polite"></div>
+    </div>
+
+    <div class="page-footer-nav">
+      <button class="ghost" onclick="showPage('network')">← Prev: Industry Network</button>
+      <button class="cta" onclick="showPage('home')">Back to Home ↑</button>
+    </div>
+  </section>
+</main>
+
+<!-- Slide-over B2B RFQ & Free Sample Tray Drawer -->
+<div class="drawer-backdrop" id="drawerBackdrop" onclick="toggleDrawer(false)"></div>
+<aside class="drawer" id="rfqDrawer" aria-label="B2B RFQ and Free Sample Tray">
+  <div class="drawer-head">
+    <h3>B2B RFQ &amp; Sample Tray</h3>
+    <button class="ghost" style="padding:6px 10px" onclick="toggleDrawer(false)">Close ✕</button>
+  </div>
+  <div class="drawer-body">
+    <p style="font-size:12px;color:var(--muted);margin:0">Compile board grades, GSM, and free sample requests for <b>Jill Bhalodiya</b> (Marketing Person, Soham Papers Pvt Ltd). Preferred currency: <b>USD</b>.</p>
+    <div id="trayItems"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+      <div class="field">
+        <label>Your Name / Company</label>
+        <input type="text" id="buyerName" placeholder="e.g. Acme Packaging" oninput="updateInquiryText()">
+      </div>
+      <div class="field">
+        <label>Destination Port / City</label>
+        <input type="text" id="buyerPort" placeholder="e.g. Jebel Ali / Mumbai" oninput="updateInquiryText()">
+      </div>
+    </div>
+    <div class="field">
+      <label>Formatted Inquiry Summary</label>
+      <textarea class="summary-preview" id="inquirySummary" readonly></textarea>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="cta solid" onclick="copyInquiry()">Copy Inquiry Summary</button>
+    <button class="ghost" onclick="clearTray()">Clear Tray</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast">Added to RFQ Tray</div>
+
+<footer>
+  <span>© SOHAM PAPERS · MORBI, INDIA</span>
+  <span>Company information compiled from public directory listings.</span>
+  <div class="footlinks">
+    <a href="#home" onclick="showPage('home');return false">Home</a>
+    <a href="#company" onclick="showPage('company');return false">Company</a>
+    <a href="#products" onclick="showPage('products');return false">Products</a>
+    <a href="#trade" onclick="showPage('trade');return false">Trade</a>
+    <a href="#network" onclick="showPage('network');return false">Network</a>
+    <a href="#contact" onclick="showPage('contact');return false">Contact</a>
+  </div>
+</footer>
+
+<script>
+// ==================== MULTI-PAGE ROUTER & DYNAMIC TITLE ====================
+const pageOrder = ['home', 'company', 'products', 'trade', 'network', 'contact'];
+const pageTitles = {
+  home: 'Soham Papers | Home — Engineered Paperboard',
+  company: 'Soham Papers | Company Profile',
+  products: 'Soham Papers | Duplex Board Products',
+  trade: 'Soham Papers | Trade & Terms',
+  network: 'Soham Papers | Industry Network',
+  contact: 'Soham Papers | Contact & Location'
+};
+
+function showPage(id) {
+  if (!pageOrder.includes(id)) id = 'home';
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === id));
+  document.querySelectorAll('#mainNav a').forEach(a => a.classList.toggle('active', a.dataset.page === id));
+
+  const idx = pageOrder.indexOf(id) + 1;
+  const titleText = pageTitles[id];
+  document.title = titleText;
+  document.getElementById('pageNumberBadge').textContent = `PAGE 0${idx} / 06`;
+  document.getElementById('activeDocTitle').textContent = titleText;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  try { history.replaceState(null, titleText, '#' + id); } catch (e) {}
+}
+
+function stepPage(delta) {
+  const current = pageOrder.find(id => document.getElementById(id).classList.contains('active')) || 'home';
+  const nextIdx = (pageOrder.indexOf(current) + delta + pageOrder.length) % pageOrder.length;
+  showPage(pageOrder[nextIdx]);
+}
+
+// ==================== INTERACTIVE 3D REEL STUDIO ====================
+const visual = document.getElementById('visual');
+const roll = document.getElementById('roll');
+let currentReelGrade = 'lwc';
+let currentReelGsm = 250;
+let rotY = -24, rotX = 8, isDragging = false, lastX = 0, lastY = 0;
+
+const reelGradeMeta = {
+  lwc: { short: 'LWC DUPLEX', detail: 'LWC Duplex · 12 GSM Coating' },
+  hwc: { short: 'HWC DUPLEX', detail: 'HWC Duplex · 24 GSM Coating' },
+  blue: { short: 'DELUXE BLUE', detail: 'Deluxe Blue · 12 GSM Colour Coating' },
+  uncoated: { short: 'ORDINARY DUPLEX', detail: 'Uncoated / Ordinary Duplex Board' }
+};
+
+function updateReelVisual() {
+  const scale = 0.88 + ((currentReelGsm - 180) / 270) * 0.2;
+  roll.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) scale(${scale.toFixed(2)})`;
+  document.getElementById('reelGradeTag').textContent = `${reelGradeMeta[currentReelGrade].short} · ${currentReelGsm} GSM`;
+  document.getElementById('floatGsm').textContent = `${currentReelGsm} GSM`;
+  document.getElementById('floatGrade').textContent = reelGradeMeta[currentReelGrade].detail;
+}
+
+function setHeroReelGrade(grade, btn) {
+  currentReelGrade = grade;
+  roll.className = 'roll' + (grade !== 'lwc' ? ` grade-${grade}` : '');
+  document.querySelectorAll('#heroGradePills .grade-pill').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  updateReelVisual();
+}
+
+function setHeroReelGsm(val) {
+  currentReelGsm = Number(val);
+  document.getElementById('heroGsmReadout').textContent = `${currentReelGsm} GSM`;
+  updateReelVisual();
+}
+
+visual.addEventListener('mousedown', e => { isDragging = true; lastX = e.clientX; lastY = e.clientY; });
+window.addEventListener('mouseup', () => { isDragging = false; });
+visual.addEventListener('mousemove', e => {
+  if (isDragging) {
+    rotY += (e.clientX - lastX) * 0.5;
+    rotX = Math.max(-35, Math.min(35, rotX - (e.clientY - lastY) * 0.4));
+    lastX = e.clientX; lastY = e.clientY;
+  } else {
+    const r = visual.getBoundingClientRect();
+    const dx = (e.clientX - r.left) / r.width - 0.5;
+    const dy = (e.clientY - r.top) / r.height - 0.5;
+    rotY = -24 + dx * 30;
+    rotX = 8 - dy * 20;
+  }
+  updateReelVisual();
+});
+visual.addEventListener('touchstart', e => {
+  isDragging = true; lastX = e.touches[0].clientX; lastY = e.touches[0].clientY;
+}, { passive: true });
+visual.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  const t = e.touches[0];
+  rotY += (t.clientX - lastX) * 0.5;
+  rotX = Math.max(-35, Math.min(35, rotX - (t.clientY - lastY) * 0.4));
+  lastX = t.clientX; lastY = t.clientY;
+  updateReelVisual();
+}, { passive: true });
+visual.addEventListener('touchend', () => { isDragging = false; });
+
+// ==================== PACKAGING REEL & YIELD ESTIMATOR ====================
+function updateYieldCalc() {
+  const gsm = Math.max(180, Math.min(450, Number(document.getElementById('calcGsm').value) || 250));
+  const widthCm = Math.max(30, Number(document.getElementById('calcWidth').value) || 85);
+  const tons = Math.max(1, Number(document.getElementById('calcTons').value) || 10);
+
+  const areaPerTon = Math.round(1000000 / gsm);
+  const lengthPerTon = Math.round(areaPerTon / (widthCm / 100));
+  const totalArea = areaPerTon * tons;
+
+  document.getElementById('outAreaPerTon').textContent = `${areaPerTon.toLocaleString()} m²`;
+  document.getElementById('outLengthPerTon').textContent = `${lengthPerTon.toLocaleString()} m`;
+  document.getElementById('outTotalArea').textContent = `${totalArea.toLocaleString()} m²`;
+}
+
+// ==================== RFQ & FREE SAMPLE TRAY ====================
+let tray = [];
+try { tray = JSON.parse(localStorage.getItem('soham_rfq_tray') || '[]'); } catch (e) { tray = []; }
+
+function saveTray() {
+  try { localStorage.setItem('soham_rfq_tray', JSON.stringify(tray)); } catch (e) {}
+  renderTray();
+}
+
+function addProductToTray(name, key, type) {
+  const gsm = document.getElementById(`gsm-${key}`).value || '250';
+  const qty = type === 'Free Sample' ? 'Free Sample Kit (Supplier-paid shipping)' : (document.getElementById(`qty-${key}`).value || '10 MT');
+  const term = document.getElementById(`term-${key}`).value || 'FOB Mundra';
+
+  tray.push({
+    id: Date.now() + Math.random(),
+    name,
+    type,
+    gsm: `${gsm} GSM`,
+    qty,
+    term
+  });
+  saveTray();
+  showToast(`${type}: ${name} added`);
+  toggleDrawer(true);
+}
+
+function removeTrayItem(id) {
+  tray = tray.filter(item => item.id !== id);
+  saveTray();
+}
+
+function clearTray() {
+  tray = [];
+  saveTray();
+}
+
+function renderTray() {
+  document.getElementById('rfqCount').textContent = tray.length;
+  const container = document.getElementById('trayItems');
+  if (!tray.length) {
+    container.innerHTML = `<div style="border:1px dashed var(--line);padding:18px;border-radius:6px;text-align:center;color:var(--muted);font-size:12.5px">No grades added yet. Visit the <b>Products</b> page to add Duplex Board specifications or Free Sample requests.</div>`;
+  } else {
+    container.innerHTML = tray.map(item => `
+      <div class="tray-item">
+        <button class="remove-item" onclick="removeTrayItem(${item.id})" title="Remove">✕</button>
+        <small>${item.type} · ${item.term}</small>
+        <b>${item.name}</b>
+        <p>Substance: ${item.gsm} · Quantity: ${item.qty} · Reel Form</p>
+      </div>
+    `).join('');
+  }
+  updateInquiryText();
+}
+
+function updateInquiryText() {
+  const buyer = document.getElementById('buyerName').value.trim() || '[Your Name / Company]';
+  const port = document.getElementById('buyerPort').value.trim() || '[Destination Port / City]';
+  const lines = tray.length
+    ? tray.map((it, i) => `${i + 1}. [${it.type}] ${it.name} | ${it.gsm} | ${it.qty} | ${it.term}`).join('\n')
+    : '1. General inquiry for Coated / Uncoated Duplex Board Reels (180–450 GSM)';
+
+  document.getElementById('inquirySummary').value =
+`To: Jill Bhalodiya (Marketing Person) — Soham Papers Pvt Ltd
+Location: Navagam Road, Lilapar, Morbi, Gujarat 363641, India
+From: ${buyer}
+Destination: ${port}
+
+Requested Specifications:
+${lines}
+
+Commercial Reference: Preferred Currency USD · Payment: 30% advance + balance before loading or 100% at sight (L/C or D/P).`;
+}
+
+function toggleDrawer(open) {
+  document.getElementById('rfqDrawer').classList.toggle('open', open);
+  document.getElementById('drawerBackdrop').classList.toggle('open', open);
+}
+
+function copyInquiry() {
+  const ta = document.getElementById('inquirySummary');
+  ta.select();
+  ta.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  showToast('Inquiry summary copied to clipboard');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+// ==================== INDUSTRY NETWORK DIRECTORY (ALL 26 COMPANIES) ====================
+const networkData = [
+  // Morbi · Gujarat (10)
+  { region: 'morbi', name: 'Park Paper', loc: 'Morbi · Gujarat', desc: 'Paperboard manufacturer using recycled waste paper; domestic and international markets.' },
+  { region: 'morbi', name: 'Millennium Overseas', loc: 'Morbi · Gujarat', desc: 'Millenium Papers Pvt. Ltd., described as a manufacturer, supplier and exporter of coated duplex board, kraft, corrugated and fluting paper.' },
+  { region: 'morbi', name: 'Palak Paper Mill LLP', loc: 'Morbi · Gujarat', desc: 'Manufacturer of papers used mostly in packaging and decorative laminates.' },
+  { region: 'morbi', name: 'Diyan Papers LLP', loc: 'Morbi · Gujarat', desc: 'Duplex board manufacturer; profile description references recycling of waste paper.' },
+  { region: 'morbi', name: 'Spento Papers India LLP', loc: 'Morbi · Gujarat', desc: 'Coated duplex board grey-back and white-back paper mill; manufacturer and exporter.' },
+  { region: 'morbi', name: 'Ambani Paper LLP', loc: 'Morbi · Gujarat', desc: 'Upcoming coated duplex board mill; PaperIndex description states planned capacity of 450 tons per day.' },
+  { region: 'morbi', name: 'Edicon Paper Product Pvt. Ltd.', loc: 'Morbi · Gujarat', desc: 'PaperIndex describes it as a major Western India paperboard manufacturer with 150,000 tonnes annual capacity.' },
+  { region: 'morbi', name: 'Aricon Papers Pvt. Ltd.', loc: 'Morbi · Gujarat', desc: 'Manufacturer of kraft paper and white duplex board, with exports and multiple kraft grades.' },
+  { region: 'morbi', name: 'Lemit Papers LLP', loc: 'Morbi · Gujarat', desc: 'PaperIndex describes a packaging-industry brand active in local and international markets.' },
+  { region: 'morbi', name: 'Asiatic Global LLP', loc: 'Morbi · Gujarat', desc: 'Manufacturer and exporter of recycled kraft paper from 50 GSM onwards, listed at 18–32 BF.' },
+  // Rest of India (10)
+  { region: 'india', name: 'Rama Paper Mills Ltd.', loc: 'New Delhi · Delhi', desc: 'PaperIndex description references newsprint, duplex board, writing and printing paper made by recycling waste paper.' },
+  { region: 'india', name: 'JK Paper Ltd.', loc: 'New Delhi · Delhi', desc: 'PaperIndex describes sustainable paper solutions and social farm forestry.' },
+  { region: 'india', name: 'Venkraft Paper Mills (P) Ltd.', loc: 'Hosur · Tamil Nadu', desc: 'Two units near Bengaluru; listed combined capacity exceeds 100,000 tonnes per annum, including kraft paper and fluting media.' },
+  { region: 'india', name: 'Magnum Ventures Limited', loc: 'Sahibabad · Uttar Pradesh', desc: 'PaperIndex describes a major northern India writing, printing paper and duplex board manufacturer, founded in 1980.' },
+  { region: 'india', name: 'Godwin Industries', loc: 'Delhi', desc: 'PaperIndex description refers to PAPERPACK, a family-run group with 13 factories across India.' },
+  { region: 'india', name: 'Bindlas International Ltd.', loc: 'Muzaffarnagar · Uttar Pradesh', desc: 'Part of the Bindal Group, described as an established paper-industry group in northern India.' },
+  { region: 'india', name: 'TEC Papers Pvt. Ltd.', loc: 'Ahmedabad · Gujarat', desc: 'Listed product range includes tissue, posters, kraft, OTC, duplex, colour board and grey board.' },
+  { region: 'india', name: 'Impression Packaging', loc: 'Ahmedabad · Gujarat', desc: 'Paper/board converter with polycoating, metallizing and gravure printing services.' },
+  { region: 'india', name: 'Unique Packaging Solutions', loc: 'Roorkee · Uttarakhand', desc: 'PaperIndex description references kraft paper, test liner and fluting paper manufacturing.' },
+  { region: 'india', name: 'Vishvakarma Paper and Boards Ltd.', loc: 'Kashipur · Uttarakhand', desc: 'Paper and board supplier with a broad product range.' },
+  // International (6)
+  { region: 'intl', name: 'El-Salam PaperMill', loc: 'Alexandria · Egypt', desc: 'Established in 1978; PaperIndex describes it as an early paper-industry producer in Egypt and the Middle East.' },
+  { region: 'intl', name: 'Shin International Export', loc: 'Jasaan · Misamis Oriental', desc: 'Founded in 1984; described as a manufacturer with a broad selection of products.' },
+  { region: 'intl', name: 'Türkoğlu Cardboard and Paper Products', loc: 'Istanbul · Turkey', desc: 'Manufacturer and exporter of cardboard, paper and packaging products, including cake boards and confectionery boxes.' },
+  { region: 'intl', name: 'Shanghai HongTu Sunway Eco-Friendly Technology Inc.', loc: 'China', desc: 'PaperIndex description identifies a manufacturer of laminated grey board, duplex board and custom paperboard.' },
+  { region: 'intl', name: 'Strathcona Paper LP', loc: 'Toronto · Ontario · Canada', desc: 'Manufacturer of recycled clay-coated boxboard, including medium- to heavyweight grades.' },
+  { region: 'intl', name: 'Premtec Paper', loc: 'Zhengzhou · Henan · China', desc: 'Supplier listing includes printing paper, board, grey/white-back duplex board and stationery paper.' }
+];
+
+let activeRegion = 'all';
+
+function renderNetwork() {
+  const q = (document.getElementById('networkSearch').value || '').toLowerCase().trim();
+  const filtered = networkData.filter(item => {
+    const matchRegion = activeRegion === 'all' || item.region === activeRegion;
+    const matchText = !q || item.name.toLowerCase().includes(q) || item.loc.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q);
+    return matchRegion && matchText;
+  });
+  document.getElementById('networkGrid').innerHTML = filtered.length
+    ? filtered.map(c => `
+        <div class="company">
+          <b>${c.name}</b>
+          <small>${c.loc}</small>
+          <p>${c.desc}</p>
+        </div>
+      `).join('')
+    : `<p style="color:var(--muted);grid-column:1/-1">No directory entries matched your filter.</p>`;
+}
+
+function filterNetwork(region, btn) {
+  activeRegion = region;
+  document.querySelectorAll('#networkTabs .filter-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderNetwork();
+}
+
+function filterNetworkSearch() {
+  renderNetwork();
+}
+
+// ==================== GOOGLE MAPS SWITCHER ====================
+function switchMap(target) {
+  const frame = document.getElementById('mapFrame');
+  const link = document.getElementById('mapExternalLink');
+  document.getElementById('mapBtnMill').classList.toggle('active', target === 'mill');
+  document.getElementById('mapBtnPort').classList.toggle('active', target === 'port');
+
+  if (target === 'port') {
+    frame.src = 'https://maps.google.com/maps?q=Mundra%20Port%20Gujarat%20India&t=&z=11&ie=UTF8&iwloc=&output=embed';
+    link.href = 'https://www.google.com/maps/search/?api=1&query=Mundra+Port+Gujarat+India';
+  } else {
+    frame.src = 'https://maps.google.com/maps?q=Soham%20Papers%20Navagam%20Road%20Lilapar%20Morbi%20Gujarat%20363641&t=&z=13&ie=UTF8&iwloc=&output=embed';
+    link.href = 'https://www.google.com/maps/search/?api=1&query=Soham+Papers+Navagam+Road+Lilapar+Morbi+Gujarat+363641';
+  }
+}
+
+// ==================== FAQ AI DESK ====================
+function askFAQ() {
+  const q = document.getElementById('question').value.toLowerCase().trim();
+  const a = document.getElementById('answer');
+  if (!q) { a.textContent = 'Enter a question to get an answer.'; return; }
+
+  const entries = [
+    ['gsm|weight|range', 'The listed duplex board range is 180–450 GSM, supplied in reel form.'],
+    ['lwc|light weight', 'LWC has a listed 12 GSM coating for a smooth and bright surface.'],
+    ['hwc|high weight', 'HWC has a listed 24 GSM coating for an ultra-smooth, glossy surface.'],
+    ['blue|deluxe', 'Deluxe Blue is blue-colour coated paper with a listed 12 GSM coating for colour effect.'],
+    ['product|manufacture|make', 'Soham Papers lists LWC and HWC duplex board, Deluxe Blue coated duplex, and uncoated / ordinary duplex board.'],
+    ['application|use|box|carton|textile|liner', 'Applications listed include corrugated boxes, liners, textile tubes and duplex cartons.'],
+    ['export|country|destination', 'The profile lists 50% export percentage, 15-day average export lead time, Mundra as nearest port, and UAE, China and African countries as destinations.'],
+    ['lead time|delivery time', 'The listed average lead time is 7 days for domestic sales and 15 days for exports.'],
+    ['payment|lc|d/p', 'Listed terms: 30% at order and balance before loading, or 100% at sight via L/C or D/P. Preferred currency is USD.'],
+    ['sample', 'The profile says free samples are sent and shipping is paid by the supplier.'],
+    ['address|location|where', 'Navagam Road, Lilapar, Morbi, Gujarat 363641, India.'],
+    ['contact|phone|jill', 'The PaperIndex profile names Jill Bhalodiya as Marketing Person. PaperMart Directory lists +91 02822 294600; verify before use.'],
+    ['port|mundra', 'Mundra, India is listed as the nearest port.']
+  ];
+  const found = entries.find(([keys]) => keys.split('|').some(k => q.includes(k)));
+  a.textContent = found
+    ? found[1]
+    : 'I don’t have a verified answer for that in the public profile data. Please contact Soham Papers directly or check the original PaperIndex profile.';
+}
+document.getElementById('question').addEventListener('keydown', e => { if (e.key === 'Enter') askFAQ(); });
+
+// ==================== INITIALIZATION ====================
+window.addEventListener('load', () => {
+  const hashId = location.hash.slice(1);
+  showPage(pageOrder.includes(hashId) ? hashId : 'home');
+  updateReelVisual();
+  updateYieldCalc();
+  renderNetwork();
+  renderTray();
+});
+</script>
+</body>
+</html>
+```
